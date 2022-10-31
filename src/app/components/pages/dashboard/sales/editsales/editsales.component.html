@@ -1,0 +1,514 @@
+<app-header></app-header>
+<!-- view-sales start -->
+<section [ngClass]="{ 'md:pl-20': this.isNavMinimized,  'md:pl-64': !this.isNavMinimized  }" class="pl-20   ">
+    <div class="grid grid-cols-1 gap-1 items-center">
+
+        <div class=" grid grid-cols-2 gap-4  items-center py-4   xl:pl-5">
+            <div>
+                <h1 class="text-black-500 text-xl  font-weight-600 font-light    text-3xl   ">
+                    Edit Sale
+                </h1>
+            </div>
+            <div class="grid justify-items-end "> <button
+                    class="bg-transparent hover:bg-blue-500 justify-items-end text-blue-500  font-semibold outline-blue-500  hover:text-white border border-blue-500  hover:border-transparent rounded   rounded w-20 h-12 mr-9 float-right   "
+                    [routerLink]="['/dashboard/sales']">
+                    <span>Back</span>
+                </button></div>
+        </div>
+    </div>
+
+
+    <div class="bg-white p-10 m-5">
+        <div class="flex -mx-2 mb-8">
+            <div class="w-1/3 px-2">
+                <div class="bg-white h-12">
+                    <label for="wharehouse" class="text-black-500 font-weight-500 font-semibold">Date <span
+                            class="text-red-500 ">*</span> </label>
+                    <input type="date"
+                        class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-700 block w-full  p-4 "
+                        placeholder="Select Date" required>
+                </div>
+            </div>
+            <div class="w-1/3 px-2">
+                <div class="bg-white h-12">
+                    <label for="wharehouse" class="text-black-500 font-weight-500 font-semibold">Customer <span
+                            class="text-red-500 ">*</span> </label>
+                    <select id="countries"
+                        class="bg-white-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-blue-500 block w-full p-5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-purple-500">
+                        <option selected>Choose Customer</option>
+                        <option value="US">walk-in-customer</option>
+                        <option value="CA">Brain cain</option>
+                        <option value="FR">ursula manquez</option>
+                        <option value="DE">wilma phelps</option>
+                        <option value="DE">lilah pratt</option>
+                        <option value="DE">Tedt</option>
+                        <option value="DE">Vishal ribdiya</option>
+
+                    </select>
+                </div>
+            </div>
+            <div class="w-1/3 px-2">
+                <div class="bg-white h-12">
+                    <label for="wharehouse" class="text-black-500 font-weight-500 font-semibold">Warehouse <span
+                            class="text-red-500 ">*</span> </label>
+                    <select id="countries"
+                        class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-blue-500 block w-full p-5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-purple-500">
+                        <option selected>Choose Customer</option>
+                        <option value="US">walk-in-customer</option>
+                        <option value="CA">Brain cain</option>
+                        <option value="FR">ursula manquez</option>
+                        <option value="DE">wilma phelps</option>
+                        <option value="DE">lilah pratt</option>
+                        <option value="DE">Tedt</option>
+                        <option value="DE">Vishal ribdiya</option>
+
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="flex -mx-2 mb-4">
+            <div class="w-full px-2 p-4">
+                <label for="product" class="text-black-500 font-weight-500 font-semibold">Product: </label>
+                <div class="relative w-full mt-1 rounded-md shadow-sm">
+
+                    <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+                        <span class="text-black-500 sm:text-lg"><i class="fa fa-search"></i></span>
+                    </div>
+
+                    <input type="text" id="simple-search"
+                        class="bg-white-900 border border-white-900  text-gray-900 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 "
+                        placeholder="Scan/Search Product by code name" required="">
+
+                    <!-- <ng-select [items]="cities" bindLabel="name"
+                            class="bg-white-900 border border-white-900 fa fa-cart-plus text-gray-900 text-lg rounded-lg focus:ring-gray-500 focus:border-gray-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-gray-500 dark:focus:border-gray-500   "
+                           [(ngModel)]="selectedCity">
+                        </ng-select> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="flex -mx-2 ">
+            <div class="w-full px-2">
+                <label for="product" class="text-black-500 font-weight-500 font-semibold">Order Items:<span
+                        class="text-red-500 ">*</span> </label>
+
+                <div class="flex flex-row items-center">
+                    <div class="min-w-full overflow-x-auto">
+                        <table>
+                            <thead class="border-b bg-white-50">
+
+                                <th scope="col"
+                                    class="text-sm font-medium text-gray-500 border-b bg-gray-50 px-6 py-4 text-center hover:text-blue-500 transition duration-300 ease-in-out hover:bg-gray-100">
+                                    PRODUCT
+                                </th>
+                                <th scope="col"
+                                    class="text-sm font-medium uppercase text-gray-500 border-b bg-gray-50 px-6 py-4 text-center hover:text-blue-500 transition duration-300 ease-in-out hover:bg-gray-100">
+                                    Net unit PRICE
+                                </th>
+                                <th scope="col"
+                                    class="text-sm font-medium uppercase text-gray-500 border-b bg-gray-50 px-6 py-4 text-center hover:text-blue-500 transition duration-300 ease-in-out hover:bg-gray-100">
+                                    stock
+                                </th>
+                                <th scope="col"
+                                    class="text-sm font-medium text-gray-500 border-b bg-gray-50 px-6 py-4 text-center hover:text-blue-500 transition duration-300 ease-in-out hover:bg-gray-100">
+                                    QTY
+                                </th>
+                                <th scope="col"
+                                    class="text-sm font-medium uppercase text-gray-500 border-b bg-gray-50 px-6 py-4 text-center hover:text-blue-500 transition duration-300 ease-in-out hover:bg-gray-100">
+                                    Discount
+                                </th>
+                                <th scope="col"
+                                    class="text-sm font-medium uppercase text-gray-500 border-b bg-gray-50 px-6 py-4 text-center hover:text-blue-500 transition duration-300 ease-in-out hover:bg-gray-100">
+                                    %tax
+                                </th>
+                                <th scope="col"
+                                    class="text-sm font-medium text-gray-500 border-b bg-gray-50 px-6 py-4 text-center hover:text-blue-500 transition duration-300 ease-in-out hover:bg-gray-100">
+                                    SUB TOT
+                                </th>
+                                <th scope="col"
+                                    class="text-sm font-medium text-gray-500 border-b bg-gray-50 px-6 py-4 text-center hover:text-blue-500 transition duration-300 ease-in-out hover:bg-gray-100">
+                                    ACTION </th>
+                            </thead>
+
+                            <tbody>
+
+                                <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+                                    <!-- <td
+                    class="px-6 py-4 whitespace-nowrap text-lg font-medium text-gray-500">
+                    1</td> -->
+                                    <td
+                                        class="text-lg text-center text-gray-500 font-light px-6 py-4 whitespace-nowrap">
+                                        <h4 class="text-gray-400 font-semibold ">Red
+                                            Sunglass</h4>
+                                        <div class="d-flex align-items-center">
+                                            <span class="bg-green-100 text-green-500 text-sm rounded-md p-1 m-1"><span>Red
+                                                    Sunglass</span></span>
+                                            <span class="bg-gray-100 text-blue-500 text-sm rounded-md p-1"><i
+                                                    class="fa fa-pencil"></i></span>
+                                        </div>
+                                    </td>
+                                    <td
+                                        class="text-lg  text-center text-gray-500 font-light px-6 py-4 whitespace-nowrap">
+                                        $ 75
+                                    </td>
+                                    <td
+                                        class="text-lg  text-center text-gray-500 font-light px-6 py-4 whitespace-nowrap">
+                                        <span class="bg-orange-100 text-orange-500 rounded-md p-2">27.17 PE</span>
+                                    </td>
+                                    <td class="text-lg  text-center text-gray-500 px-8 py-4 whitespace-nowrap">
+                                        <div class="flex flex-row h-10  rounded-lg relative bg-transparent mt-1">
+                                            <button data-action="decrement"
+                                                class="  bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-10 rounded-l cursor-pointer outline-none">
+                                                <span class="m-auto text-2xl font-thin">−</span>
+                                            </button>
+                                            <input type="number"
+                                                class="outline-none focus:outline-none text-center w-10  font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none"
+                                                name="custom-input-number" value="1">
+                                            <button data-action="increment"
+                                                class="bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-10 rounded-r cursor-pointer">
+                                                <span class="m-auto text-2xl font-thin">+</span>
+                                            </button>
+                                        </div>
+
+                                    </td>
+                                    <td
+                                        class="text-lg  text-center text-gray-500 font-light px-6 py-4 whitespace-nowrap">
+                                        $ 75
+                                    </td>
+                                    <td
+                                        class="text-lg  text-center text-gray-500 font-light px-6 py-4 whitespace-nowrap">
+                                        $ 75
+                                    </td>
+                                    <td
+                                        class="text-lg  text-center text-gray-500 font-light px-6 py-4 whitespace-nowrap">
+                                        $ 75
+                                    </td>
+                                    <td><i
+                                            class="fa fa-trash-o font-semibold grid justify-items-center text-2xl text-red-500"></i>
+                                    </td>
+                                </tr>
+                                <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+                                    <!-- <td
+                    class="px-6 py-4 whitespace-nowrap text-lg font-medium text-gray-500">
+                    1</td> -->
+                                    <td
+                                        class="text-lg text-center text-gray-500 font-light px-6 py-4 whitespace-nowrap">
+                                        <h4 class="text-gray-400 font-semibold ">Black Sunglasses</h4>
+                                        <div class="d-flex align-items-center">
+                                            <span class="bg-green-100 text-green-500 text-sm rounded-md p-1 m-1"><span>Black
+                                                    Sunglass</span></span>
+                                            <span class="bg-gray-100 text-blue-500 text-sm rounded-md p-1"><i
+                                                    class="fa fa-pencil"></i></span>
+                                        </div>
+                                    </td>
+                                    <td
+                                        class="text-lg  text-center text-gray-500 font-light px-6 py-4 whitespace-nowrap">
+                                        $ 75
+                                    </td>
+                                    <td
+                                        class="text-lg  text-center text-gray-500 font-light px-6 py-4 whitespace-nowrap">
+                                        <span class="bg-orange-100 text-orange-500 rounded-md p-2">27.17 PE</span>
+                                    </td>
+                                    <td class="text-lg  text-center text-gray-500 px-8 py-4 whitespace-nowrap">
+                                        <div class="flex flex-row h-10  rounded-lg relative bg-transparent mt-1">
+                                            <button data-action="decrement"
+                                                class="  bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-10 rounded-l cursor-pointer outline-none">
+                                                <span class="m-auto text-2xl font-thin">−</span>
+                                            </button>
+                                            <input type="number"
+                                                class="outline-none focus:outline-none text-center w-10  font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none"
+                                                name="custom-input-number" value="1">
+                                            <button data-action="increment"
+                                                class="bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-10 rounded-r cursor-pointer">
+                                                <span class="m-auto text-2xl font-thin">+</span>
+                                            </button>
+                                        </div>
+
+                                    </td>
+                                    <td
+                                        class="text-lg  text-center text-gray-500 font-light px-6 py-4 whitespace-nowrap">
+                                        $ 75
+                                    </td>
+                                    <td
+                                        class="text-lg  text-center text-gray-500 font-light px-6 py-4 whitespace-nowrap">
+                                        $ 75
+                                    </td>
+                                    <td
+                                        class="text-lg  text-center text-gray-500 font-light px-6 py-4 whitespace-nowrap">
+                                        $ 75
+                                    </td>
+                                    <td><i
+                                            class="fa fa-trash-o font-semibold grid justify-items-center text-2xl text-red-500"></i>
+                                    </td>
+                                </tr>
+                                <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+                                    <!-- <td
+                    class="px-6 py-4 whitespace-nowrap text-lg font-medium text-gray-500">
+                    1</td> -->
+                                    <td
+                                        class="text-lg text-center text-gray-500 font-light px-6 py-4 whitespace-nowrap">
+                                        <h4 class="text-gray-400 font-semibold ">Red
+                                            Sunglass</h4>
+                                        <div class="d-flex align-items-center">
+                                            <span class="bg-green-100 text-green-500 text-sm rounded-md p-1 m-1"><span>Red
+                                                    Sunglass</span></span>
+                                            <span class="bg-gray-100 text-blue-500 text-sm rounded-md p-1"><i
+                                                    class="fa fa-pencil"></i></span>
+                                        </div>
+                                    </td>
+                                    <td
+                                        class="text-lg  text-center text-gray-500 font-light px-6 py-4 whitespace-nowrap">
+                                        $ 75
+                                    </td>
+                                    <td
+                                        class="text-lg  text-center text-gray-500 font-light px-6 py-4 whitespace-nowrap">
+                                        <span class="bg-orange-100 text-orange-500 rounded-md p-2">27.17 PE</span>
+                                    </td>
+                                    <td class="text-lg  text-center text-gray-500 px-8 py-4 whitespace-nowrap">
+                                        <div class="flex flex-row h-10  rounded-lg relative bg-transparent mt-1">
+                                            <button data-action="decrement"
+                                                class="  bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-10 rounded-l cursor-pointer outline-none">
+                                                <span class="m-auto text-2xl font-thin">−</span>
+                                            </button>
+                                            <input type="number"
+                                                class="outline-none focus:outline-none text-center w-10  font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none"
+                                                name="custom-input-number" value="1">
+                                            <button data-action="increment"
+                                                class="bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-10 rounded-r cursor-pointer">
+                                                <span class="m-auto text-2xl font-thin">+</span>
+                                            </button>
+                                        </div>
+
+                                    </td>
+                                    <td
+                                        class="text-lg  text-center text-gray-500 font-light px-6 py-4 whitespace-nowrap">
+                                        $ 75
+                                    </td>
+                                    <td
+                                        class="text-lg  text-center text-gray-500 font-light px-6 py-4 whitespace-nowrap">
+                                        $ 75
+                                    </td>
+                                    <td
+                                        class="text-lg  text-center text-gray-500 font-light px-6 py-4 whitespace-nowrap">
+                                        $ 75
+                                    </td>
+                                    <td><i
+                                            class="fa fa-trash-o font-semibold grid justify-items-center text-2xl text-red-500"></i>
+                                    </td>
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <br><br>
+        <div class="container  mx-auto px-4 md:px-12">
+
+            <div class="flex flex-wrap -mx-1 lg:-mx-4">
+
+
+                <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+                    <div class="w-1/3 px-2">
+                    </div>
+
+                </div>
+                <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+                    <div class="w-1/3 px-2">
+                    </div>
+
+                </div>
+                <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+
+                    <div class="  mx-auto px-4 ">
+                        <div class="overflow-x-auto  border relative  ">
+                            <table class="w-full border-b text-sm text-left text-gray-500 dark:text-gray-400">
+
+
+                                <tbody>
+                                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                        <td scope="row"
+                                            class="py-4 px-6 font-medium text-gray-400 whitespace-nowrap dark:text-white">
+                                            Order Tax
+                                        </td>
+                                        <td class="py-4 px-6 text-gray-400">
+                                            $ 1099.98 (18.00%)
+                                        </td>
+                                        <!-- <td class="py-4 px-6">
+                                                1
+                                            </td>
+                                            <td class="py-4 px-6">
+                                                $ 99.00
+                                            </td>
+                                            <td class="py-4 px-6">
+                                                $ 00
+                                            </td>
+                                            <td class="py-4 px-6">
+                                                $ 12.96
+                                            </td>
+                                            <td class="py-4 px-6">
+                                                $ 99.00
+                                            </td> -->
+                                    </tr>
+                                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                        <td scope="row"
+                                            class="py-4 px-6 font-medium text-gray-400 whitespace-nowrap dark:text-white">
+                                            Discount
+                                        </td>
+                                        <td class="py-4 px-6 text-gray-400">
+                                            $ 00.00
+                                        </td>
+                                        <!-- <td class="py-4 px-6">
+                                                1
+                                            </td>
+                                            <td class="py-4 px-6">
+                                                $ 99.00
+                                            </td>
+                                            <td class="py-4 px-6">
+                                                $ 00
+                                            </td>
+                                            <td class="py-4 px-6">
+                                                $ 12.96
+                                            </td>
+                                            <td class="py-4 px-6">
+                                                $ 99.00
+                                            </td> -->
+                                    </tr>
+                                    <tr class="bg-white dark:bg-gray-800 border-b">
+                                        <td scope="row"
+                                            class="py-4 px-6 font-medium text-gray-400 whitespace-nowrap dark:text-white">
+                                            Shipping
+                                        </td>
+                                        <td class="py-4 px-6 text-gray-400">
+                                            $ 00.00
+                                        </td>
+
+                                        <!-- <td class="py-4 px-6">
+                                            $ 99.00
+                                        </td>
+                                        <td class="py-4 px-6">
+                                            $ 00
+                                        </td>
+                                        <td class="py-4 px-6">
+                                            $ 12.96
+                                        </td>
+                                        <td class="py-4 px-6">
+                                            $ 99.00
+                                        </td> -->
+                                    </tr>
+                                    <tr class="bg-white dark:bg-gray-800">
+                                        <td scope="row"
+                                            class="py-4 px-6 font-medium text-blue-500 whitespace-nowrap dark:text-white">
+                                            Grand Total
+                                        </td>
+                                        <td class="py-4 px-6 text-blue-500">
+                                            $ 7210.97
+                                        </td>
+
+                                        <!-- <td class="py-4 px-6">
+                                            $ 99.00
+                                        </td>
+                                        <td class="py-4 px-6">
+                                            $ 00
+                                        </td>
+                                        <td class="py-4 px-6">
+                                            $ 12.96
+                                        </td>
+                                        <td class="py-4 px-6">
+                                            $ 99.00
+                                        </td> -->
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="flex -mx-2 mb-8">
+            <div class="w-1/3 px-2">
+                <div class="bg-white h-12">
+                    <label for="Shipping" class="text-black-500 font-weight-500 font-semibold">Order Tax: </label>
+                    <div class="relative w-full mt-4 rounded-md shadow-sm">
+                        <div
+                            class="pointer-events-none  bg-gray-200  rounded-lg border absolute inset-y-0 left-0 flex items-center pl-3 pr-3">
+                            <span class="text-gray-500  sm:text-lg"><i class="fa fa-thin fa-percent">
+                                </i></span>
+                        </div>
+                        <input type="text" id="simple-search"
+                            class="bg-white-900 border border-white-900 text-center text-gray-900 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 "
+                            placeholder="Tax" required="">
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="w-1/3 px-2">
+                <div class="bg-white h-12">
+                    <label for="Shipping" class="text-black-500 font-weight-500 font-semibold">Discount: </label>
+                    <div class="relative w-full mt-4 rounded-md shadow-sm">
+                        <div
+                            class="pointer-events-none  bg-gray-200  rounded-lg border absolute inset-y-0 left-0 flex items-center pl-3 pr-3">
+                            <span class="text-gray-500  sm:text-lg"><i class="fa  fa-usd">
+                                </i></span>
+                        </div>
+                        <input type="text" id="simple-search"
+                            class="bg-white-900 border border-white-900 text-center text-gray-900 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 "
+                            placeholder="Discount" required="">
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="w-1/3 px-2">
+                <div class="bg-white h-12">
+                    <label for="Shipping" class="text-black-500 font-weight-500 font-semibold">Shipping: </label>
+                    <div class="relative w-full mt-4 rounded-md shadow-sm">
+                        <div
+                            class="pointer-events-none  bg-gray-200  rounded-lg border absolute inset-y-0 left-0 flex items-center pl-3 pr-3">
+                            <span class="text-gray-500  sm:text-lg"><i class="fa fa-usd">
+                                </i></span>
+                        </div>
+                        <input type="text" id="simple-search"
+                            class="bg-white-900 border border-white-900 text-center text-gray-900 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 "
+                            placeholder="Discount" required="">
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex -mx-2 py-4 mb-8">
+            <div class="w-1/3 px-2">
+                <div class="bg-white h-12">
+                    <label for="wharehouse" class="text-black-500 font-weight-500 font-semibold">Status: <span
+                            class="text-red-500 ">*</span> </label>
+                    <select id="countries"
+                        class="bg-white-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-blue-500 block w-full p-5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-purple-500">
+                        <option selected>Received</option>
+                        <option value="US">Pending</option>
+                        <option value="CA">Ordered</option>
+
+                    </select>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</section>
+
+<!-- view-sales end -->

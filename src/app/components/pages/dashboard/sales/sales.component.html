@@ -1,0 +1,432 @@
+<!-- header start -->
+<app-header></app-header>
+<!-- header end -->
+<!-- sales start -->
+<div>
+    <section [ngClass]="{ 'md:pl-20': this.isNavMinimized,  'md:pl-64': !this.isNavMinimized }"
+        class="pl-20  w-full h-16 border-b-2 py-2 ">
+        <div class="grid grid-cols-1 gap-1 items-center">
+            <div class="flex flex-wrap mb-2">
+
+                <div class="w-full  md:w-1/4 xl:w-1/4 pt-3 px-3 md:pr-2 xl:pr-3 xl:pl-3 ">
+                    <div class="bg-green-600 border rounded-lg shadow h-20 p-2">
+                        <div class="flex flex-row items-center">
+                            <div class="flex-shrink pl-3 pr-4"><i
+                                    class="fa fa-shopping-cart fa-3x fa-fw fa-inverse"></i>
+                            </div>
+                            <div class="flex-1 text-right pr-3" [routerLink]="['/counter']">
+                                <div>
+                                    <h3 class="text-white font-weight-600 font-bold text-3xl">Counter 1<span
+                                            class="text-green-400"></span>
+                                    </h3>
+                                    <!-- <h5 class="text-gray-200 text-xl"> Sales</h5> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full  md:w-1/4 xl:w-1/4 pt-3 px-3 md:pr-2 xl:pr-3 xl:pl-3">
+                    <div class="bg-orange-600 border rounded-lg shadow h-20 p-2">
+                        <div class="flex flex-row items-center">
+                            <div class="flex-shrink pl-3 pr-4"><i class="fa fa-cart-plus fa-3x fa-fw fa-inverse"></i>
+                            </div>
+                            <div class="flex-1 text-right pr-3">
+
+                                <h3 class="text-white font-weight-600 font-bold text-3xl">Counter 2<span
+                                        class="text-green-400"></span>
+                                </h3>
+                                <!-- <h5 class="text-gray-200 text-xl"> Purchases</h5> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full  md:w-1/4 xl:w-1/4 pt-3 px-3 md:pr-2 xl:pr-3 xl:pl-3">
+                    <div class="bg-purple-600 border rounded-lg shadow h-20 p-2">
+                        <div class="flex flex-row items-center">
+                            <div class="flex-shrink pl-3 pr-4"><i class="fa fa-cart-plus fa-3x fa-fw fa-inverse"></i>
+                            </div>
+                            <div class="flex-1 text-right pr-3">
+
+                                <h3 class="text-white font-weight-600 font-bold text-3xl">Counter 3<span
+                                        class="text-green-400"></span>
+                                </h3>
+                                <!-- <h5 class="text-gray-200 text-xl"> Sales Return</h5> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full  md:w-1/4 xl:w-1/4 pt-3 px-3 md:pr-2 xl:pr-3 xl:pl-3">
+                    <div class="bg-yellow-600 border rounded-lg shadow h-20 p-2">
+                        <div class="flex flex-row items-center">
+                            <div class="flex-shrink pl-3 pr-4"><i class="fa fa-cart-plus fa-3x fa-fw fa-inverse"></i>
+                            </div>
+                            <div class="flex-1 text-right pr-3">
+
+                                <h3 class="text-white font-weight-600 font-bold text-3xl">Counter 4<span
+                                        class="text-green-400"></span>
+                                </h3>
+                                <!-- <h5 class="text-gray-200 text-xl"> Purchase Return</h5> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Counter ends here****** -->
+        <div class="flex flex-wrap -mx-2 mb-4 pt-3 px-3  md:pr-2 xl:pr-3 xl:pl-3">
+            <div class="w-full md:w-1/2 lg:w-1/4  mb-4 pt-3 px-3 md:pr-2 xl:pr-3 xl:pl-3">
+                <div class=" text-sm text-grey-dark ">
+                    <form>
+                        <label for="default-search"
+                            class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-300">Search</label>
+                        <div class="relative">
+                            <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                                <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                </svg>
+                            </div>
+                            <input type="search" id="default-search"
+                                class="block p-4 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                placeholder="Search ..." required>
+                            <!-- <button type="submit"
+                                class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button> -->
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 lg:w-1/4 pt-3 px-3 p-4 md:pr-2 xl:pr-3 xl:pl-3 mb-4">
+                <div class=" h-12 text-sm text-grey-dark flex items-center justify-center">
+
+                </div>
+            </div>
+            <div class="w-full md:w-1/2  xl:pr-3 xl:pl-3 ">
+                <div class="text-sm text-grey-dark ">
+
+                    <div class="  w-full flex flex-wrap bg-grey-light">
+                        <div
+                            class="  w-full md:w-1/2 lg:w-1/4 p-4 pt-3 px-3 md:pr-2 xl:pr-3 xl:pl-3 bg-grey grid justify-items-end flex items-center ">
+                            <div class=" relative py-2 ">
+                                <button type="button"
+                                    class="
+                                dropdown-toggle
+                                text-white bg-blue-500  font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 grid justify-items-center    "
+                                    id="menu-button" aria-expanded="true" aria-haspopup="true" (click)="OnShowFilter()">
+                                    <i class="fa fa-filter fa-2x"></i>
+                                    <!-- <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-down"
+                                    class="w-2 ml-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 320 512">
+                                    <path fill="currentColor"
+                                        d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z">
+                                    </path>
+                                </svg> -->
+                                </button>
+
+                            </div>
+                            <div *ngIf="ShowFilter==true"
+                                class="absolute  z-10 mt-2 w-full md:w-1/2 lg:w-1/4 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                                role="menu" style="margin-top:25rem" aria-orientation="vertical"
+                                aria-labelledby="menu-button" tabindex="-1">
+                                <div class="px-7 py-5" role="none">
+                                    <div class="mb-5 p-0 "><label for="wharehouse"
+                                            class="font-sans font-semibold font-xl">Status
+                                        </label>
+                                        <select id="countries"
+                                            class="bg-gray-50 w-1/2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-blue-500 block w-full p-4 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-purple-500">
+                                            <option selected>All</option>
+                                            <option value="US">All</option>
+                                            <option value="CA">Received</option>
+                                            <option value="FR">Ordered</option>
+                                            <option value="DE">UnOrdered</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-5 p-0 ">
+                                        <label for="wharehouse" class="font-sans font-semibold font-xl">Payment Status
+                                        </label>
+                                        <select id="countries"
+                                            class="bg-gray-50 w-1/2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-blue-500 block w-full p-4 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-purple-500">
+                                            <option selected>All</option>
+                                            <option value="CA">Paid</option>
+                                            <option value="FR">UnPaid</option>
+                                            <option value="DE">Partial</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-5 p-0 ">
+                                        <label for="wharehouse" class="font-sans font-semibold font-xl">Payment Type
+                                        </label>
+                                        <select id="countries"
+                                            class="bg-gray-50 w-1/2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-blue-500 block w-full p-4 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-purple-500">
+                                            <option selected>All</option>
+
+                                            <option value="CA">wharehouse2</option>
+                                            <option value="FR">wharehouse3</option>
+                                            <option value="DE">wharehouse4</option>
+                                        </select>
+                                    </div>
+                                    <!-- <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem"
+                                        tabindex="-1" id="menu-item-2">License</a>-->
+                                    <form method="POST" action="#" role="none">
+                                        <button type="submit"
+                                            class="text-gray-200 bg-gray-500  font-bold  text-lg px-6   py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 grid justify-items-center    "
+                                            role="menuitem" tabindex="-1" id="menu-item-3">Reset</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="  w-full lg:w-1/2 bg-grey p-4 pt-3 px-3 md:pr-2 xl:pr-3 xl:pl-3">
+                            <input type="date"
+                                class="bg-gray-50 border border-gray-500 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-700 block w-full  p-4 "
+                                placeholder="Select Date" required="">
+                        </div>
+                        <div
+                            class="  w-full md:w-1/2 lg:w-1/4 p-4 pt-3 px-3 md:pr-2 xl:pr-3 xl:pl-3 grid justify-items-end">
+                            <button
+                                class="bg-blue-500 hover:bg-blue-700  text-white font-bold uppercase text-sm px-6 h-12 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                                [routerLink]="['/createsale']">
+                                <span>create sale</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Search/Filter UI starts here******  -->
+        <!-- <div class="grid grid-cols-2 gap-4 py-5   xl:pl-3">
+            <div>
+                <div class="relative float-left ml-7">
+                    <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                        <svg aria-hidden="true" class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                                clip-rule="evenodd">
+                            </path>
+                        </svg>
+                    </div>
+                    <input type="text" id="simple-search" style="width: 150%;"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 "
+                        placeholder="Search" required="">
+                </div>
+            </div>
+            <div class="grid grid-cols-3 gap-1">
+                <div>
+                    <div class="grid justify-items-end relative pr-4">
+                        <button class="
+                        dropdown-toggle
+                        px-6
+                        py-2.5
+                        bg-blue-400
+                        text-white
+                        font-medium
+                        text-xs
+                        leading-tight
+                        uppercase
+                        rounded
+                        shadow-md
+                        hover:bg-blue-500 hover:shadow-lg
+                        focus:bg-blue-500 focus:shadow-lg focus:outline-none focus:ring-0
+                        active:bg-blue-600 active:shadow-lg active:text-white
+                        transition
+                        duration-150
+                        ease-in-out
+                        flex
+                        items-center
+                        whitespace-nowrap 
+                      " type="button" id="dropdownMenuButton8" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa fa-filter fa-2x"></i>
+                            <!-- <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-down"
+                            class="w-2 ml-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 320 512">
+                            <path fill="currentColor"
+                                d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z">
+                            </path>
+                        </svg> -->
+        <!-- </button>
+
+</div>
+</div>
+<div class="grid justify-items-end">
+    <input type="date"
+        class="bg-gray-50 border border-gray-500 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-700 block w-full  p-2.5 "
+        placeholder="Select Date" required="">
+</div>
+<div class="grid justify-items-end pl-4 pr-4">
+    <button
+        class="bg-blue-500 hover:bg-blue-700 text-white font-light text-center text-xl py-2 px-4 rounded  min-w-fit  h-15   w-24 pr-5"
+        [routerLink]="['/createsale']">
+        <span>create sale</span>
+    </button>
+</div>
+</div>
+</div> -->
+
+
+
+        <div>
+            <div class="flex flex-wrap mb-2">
+
+                <div class="w-full  pt-3 px-3 md:pr-2 xl:pr-3 xl:pl-10">
+
+
+                    <div>
+
+                        <div class="flex flex-col">
+                            <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+                                <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+                                    <div class="overflow-hidden">
+
+
+
+                                        <!-- Mattable start -->
+                                        <div class="example-container mat-elevation-z8">
+
+                                            <table mat-table [dataSource]="dataSource" matSort
+                                                (matSortChange)="announceSortChange($event)"
+                                                class="mat-elevation-z8 min-w-full">
+
+                                                <!-- Position Column -->
+                                                <ng-container matColumnDef="position"
+                                                    class="border-b bg-gray-50 transition duration-300 ease-in-out hover:bg-gray-100">
+                                                    <th class="text-lg font-medium text-gray-500 border-b bg-gray-50 px-6 py-4 text-center hover:text-blue-500 transition duration-300 ease-in-out hover:bg-gray-100"
+                                                        mat-header-cell *matHeaderCellDef mat-sort-header
+                                                        sortActionDescription="Sort by number">
+                                                        REFFERENCE
+                                                    </th>
+                                                    <td class="text-sm bg-white text-red-500 font-light  whitespace-nowrap"
+                                                        mat-cell *matCellDef="let element"> <span
+                                                            class="inline-block py-1.5 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-bold bg-pink-200  rounded">
+                                                            {{element.reference}} </span></td>
+                                                </ng-container>
+
+                                                <!-- Name Column -->
+                                                <ng-container matColumnDef="name">
+                                                    <th class="text-lg font-medium text-gray-500 border-b bg-gray-50 px-6 py-4 text-center hover:text-blue-500"
+                                                        mat-header-cell *matHeaderCellDef mat-sort-header
+                                                        sortActionDescription="Sort by name">
+                                                        CUSTOMER
+                                                    </th>
+                                                    <td class="text-sm bg-white text-gray-500 font-light  whitespace-nowrap"
+                                                        mat-cell *matCellDef="let element">
+                                                        {{element.name}} </td>
+                                                </ng-container>
+                                                <ng-container matColumnDef="warehouse">
+                                                    <th class="text-lg font-medium text-gray-500 border-b bg-gray-50 px-6 py-4 text-center hover:text-blue-500"
+                                                        mat-header-cell *matHeaderCellDef mat-sort-header
+                                                        sortActionDescription="Sort by warehouse">
+                                                        WAREHOUSE
+                                                    </th>
+                                                    <td class="text-sm bg-white text-gray-500 font-light  whitespace-nowrap"
+                                                        mat-cell *matCellDef="let element">
+                                                        {{element.warehouse}} </td>
+                                                </ng-container>
+
+                                                <!-- Weight Column -->
+                                                <ng-container matColumnDef="weight">
+                                                    <th class="text-lg font-medium text-gray-500 border-b bg-gray-50 px-6 py-4 text-center hover:text-blue-500"
+                                                        mat-header-cell *matHeaderCellDef mat-sort-header
+                                                        sortActionDescription="Sort by weight">
+                                                        STATUS
+                                                    </th>
+                                                    <td class="text-sm bg-white text-white font-light  whitespace-nowrap"
+                                                        mat-cell *matCellDef="let element"> <span
+                                                            class="inline-block py-1.5 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-bold bg-green-400  rounded">
+                                                            {{element.weight}} </span></td>
+                                                </ng-container>
+
+                                                <!-- Symbol Column -->
+                                                <ng-container matColumnDef="symbol">
+                                                    <th class="text-lg font-medium text-gray-500 border-b bg-gray-50 px-6 py-4 text-center hover:text-blue-500"
+                                                        mat-header-cell *matHeaderCellDef mat-sort-header
+                                                        sortActionDescription="Sort by symbol">
+                                                        GRAND TOTAL
+                                                    </th>
+                                                    <td class="text-sm bg-white text-gray-500 font-light  whitespace-nowrap"
+                                                        mat-cell *matCellDef="let element"> {{element.total}} </td>
+                                                </ng-container>
+                                                <ng-container matColumnDef="grandtotal">
+                                                    <th class="text-lg font-medium text-gray-500 border-b bg-gray-50 px-6 py-4 text-center hover:text-blue-500"
+                                                        mat-header-cell *matHeaderCellDef mat-sort-header
+                                                        sortActionDescription="Sort by grandtotal">
+                                                        PAYMENT STATUS
+                                                    </th>
+                                                    <td class="text-sm bg-white text-gray-500 font-light  whitespace-nowrap"
+                                                        mat-cell *matCellDef="let element"> <span
+                                                            class="inline-block py-1.5 px-2.5 leading-none text-green-800  whitespace-nowrap align-baseline font-medium bg-green-200 text-white rounded">
+                                                            {{element.paid}}</span> </td>
+                                                </ng-container>
+                                                <ng-container matColumnDef="type">
+                                                    <th class="text-lg font-medium text-gray-500 border-b bg-gray-50 px-6 py-4 text-center hover:text-blue-500"
+                                                        mat-header-cell *matHeaderCellDef mat-sort-header
+                                                        sortActionDescription="Sort by type">
+                                                        PAYMENT TYPE
+                                                    </th>
+                                                    <td class="text-sm  bg-white text-gray-500 font-light  whitespace-nowrap"
+                                                        mat-cell *matCellDef="let element"> <span
+                                                            class="inline-block py-1.5 px-2.5 leading-none text-green-800  whitespace-nowrap align-baseline font-medium bg-green-200 text-white rounded">
+                                                            {{element.type}}</span> </td>
+                                                </ng-container>
+                                                <ng-container matColumnDef="paid">
+                                                    <th class="text-lg font-medium text-gray-500 border-b bg-gray-50 px-6 py-4 text-center hover:text-blue-500"
+                                                        mat-header-cell *matHeaderCellDef mat-sort-header
+                                                        sortActionDescription="Sort by paid">
+                                                        PAID
+                                                    </th>
+                                                    <td class="text-sm bg-white text-gray-500 font-light  whitespace-nowrap"
+                                                        mat-cell *matCellDef="let element"> {{element.status}} </td>
+                                                </ng-container>
+
+
+                                                <ng-container matColumnDef="createdon">
+                                                    <th class="text-lg font-medium text-gray-500 border-b bg-gray-50 px-6 py-4 text-center hover:text-blue-500"
+                                                        mat-header-cell *matHeaderCellDef mat-sort-header
+                                                        sortActionDescription="Sort by createdon">
+                                                        CREATED ON
+                                                    </th>
+                                                    <td class="text-sm bg-white text-gray-500 font-light  whitespace-nowrap"
+                                                        mat-cell *matCellDef="let element"> {{element.createdon}} </td>
+                                                </ng-container>
+                                                <ng-container matColumnDef="action">
+                                                    <th class="text-lg font-medium text-gray-500 border-b bg-gray-50 px-6 py-4 text-center hover:text-blue-500"
+                                                        mat-header-cell *matHeaderCellDef mat-sort-header
+                                                        sortActionDescription="Sort by action">
+                                                        ACTION
+                                                    </th>
+                                                    <td class="text-sm bg-white text-gray-500 font-light  whitespace-nowrap"
+                                                        mat-cell *matCellDef="let element"><button type="button"
+                                                            (click)="OnsaleView()"> <i
+                                                                class="fa fa-eye pr-2 text-lg text-green-800"></i></button><button
+                                                            type="button" (click)="OnsaleEdit()">
+                                                            <i
+                                                                class="fa fa-edit pr-2 text-lg text-blue-500"></i></button><button>
+                                                            <i class="fa fa-trash text-lg text-red-500"></i></button>
+                                                    </td>
+                                                </ng-container>
+
+
+
+                                                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                                                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                                            </table>
+
+                                            <!-- <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator> -->
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<!-- sales end -->
