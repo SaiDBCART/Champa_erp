@@ -38,6 +38,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
 export class SalesComponent implements OnInit {
   isNavMinimized = false;
   ShowFilter = false;
+  ShowModal = false;
   displayedColumns: string[] = ['position', 'name', 'warehouse', 'symbol', 'grandtotal', 'weight', 'paid', 'type', 'createdon', 'action'];
   dataSource = new MatTableDataSource(ELEMENT_DATA);
 
@@ -78,5 +79,11 @@ export class SalesComponent implements OnInit {
   }
   OnsaleEdit() {
     this.router.navigate(["/editsale"]);
+  }
+  OnCancelSale() {
+    this.ShowModal = false;
+  }
+  ShowModel() {
+    this.ShowModal = true;
   }
 }
