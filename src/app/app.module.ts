@@ -20,6 +20,7 @@ import { CreatesaleComponent } from './components/pages/dashboard/sales/createsa
 import { Counter1Component } from './components/pages/counters/counter1/counter1.component';
 import { ViewsalesComponent } from './components/pages/dashboard/sales/viewsales/viewsales.component';
 import { EditsalesComponent } from './components/pages/dashboard/sales/editsales/editsales.component';
+import { ProductsComponent } from './components/pages/dashboard/products/products.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { EditsalesComponent } from './components/pages/dashboard/sales/editsales
     Counter1Component,
     ViewsalesComponent,
     EditsalesComponent,
+    ProductsComponent,
 
   ],
   imports: [

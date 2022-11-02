@@ -8,6 +8,7 @@ import { CreatesaleComponent } from './components/pages/dashboard/sales/createsa
 import { ViewsalesComponent } from './components/pages/dashboard/sales/viewsales/viewsales.component';
 import { EditsalesComponent } from './components/pages/dashboard/sales/editsales/editsales.component';
 import { Counter1Component } from './components/pages/counters/counter1/counter1.component';
+import { ProductsComponent } from './components/pages/dashboard/products/products.component';
 import { PosComponent } from './components/pages/dashboard/pos/pos.component';
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: "viewsale", component: ViewsalesComponent },
   { path: "editsale", component: EditsalesComponent },
   { path: "counter", component: Counter1Component },
+  { path: "dashboard/product", component: ProductsComponent },
   { path: "dashboard/pos", component: PosComponent }
 ];
 
