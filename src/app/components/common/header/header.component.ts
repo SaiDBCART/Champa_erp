@@ -7,6 +7,7 @@ import { CommonService } from '../../commonservice';
 })
 export class HeaderComponent implements OnInit {
   isNavMinimized = false;
+  ShowDropdown = false;
   constructor(public commonService: CommonService) { }
 
   ngOnInit(): void {
@@ -15,5 +16,8 @@ export class HeaderComponent implements OnInit {
   onNavMinimize() {
     this.isNavMinimized = !this.isNavMinimized;
     this.commonService.AClicked('Component A is clicked!!');
+  }
+  OnShowDropdown() {
+    this.ShowDropdown = !this.ShowDropdown;
   }
 }

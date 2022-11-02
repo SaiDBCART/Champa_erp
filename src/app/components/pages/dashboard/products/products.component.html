@@ -1,0 +1,649 @@
+<!-- header start -->
+<app-header></app-header>
+<!-- header end -->
+<!-- sales start -->
+<!-- <div class="flex items-center  w-screen h-screen bg-white-800 ml-10% " >
+    
+      <div class="relative text-gray-600 focus-within:text-gray-400">
+        <span class="absolute inset-y-0 left-0 flex items-center pl-2">
+          <button type="submit" class="p-1 focus:outline-none focus:shadow-outline">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-6 h-6"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+          </button>
+        </span>
+        <input type="search" name="q" class="py-3 text-sm text-white bg-white-1000 rounded-md pl-10 focus:outline-none focus:bg-white focus:text-gray-900" placeholder="Search..." autocomplete="off">
+      </div>
+     
+    
+  </div>  -->
+<!-- <div [ngClass]="{ 'md:pl-20': this.isNavMinimized,  'md:pl-64': !this.isNavMinimized  }" class="pl-20   ">
+    <form  class="flex items-center p-4">
+        <label for="simple-search" class="sr-only">Search</label>
+        <div class="relative ">
+            <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                <svg aria-hidden="true" class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                        clip-rule="evenodd">
+                    </path>
+                </svg>
+            </div>
+            <input type="text" id="simple-search"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 "
+                placeholder="Search" required="">
+        </div>
+        <div class="align-items-center justify-content-end ">
+            
+                <button type="button" id="filterDropdown"
+                    aria-expanded="false" class="text-white btn-icon hide-arrow dropdown-toggle btn btn-primary"><svg
+                        aria-hidden="true" focusable="false" data-prefix="fas" data-icon="filter"
+                        class="svg-inline--fa fa-filter " role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512">
+                        <path fill="currentColor"
+                            d="M3.853 54.87C10.47 40.9 24.54 32 40 32H472C487.5 32 501.5 40.9 508.1 54.87C514.8 68.84 512.7 85.37 502.1 97.33L320 320.9V448C320 460.1 313.2 471.2 302.3 476.6C291.5 482 278.5 480.9 268.8 473.6L204.8 425.6C196.7 419.6 192 410.1 192 400V320.9L9.042 97.33C-.745 85.37-2.765 68.84 3.854 54.87L3.853 54.87z">
+                        </path>
+                    </svg>
+                </button>
+
+        </div>
+    </form>
+    
+</div> -->
+<div>
+    <section [ngClass]="{ 'md:pl-20': this.isNavMinimized,  'md:pl-64': !this.isNavMinimized }"
+        class="pl-20  w-full h-16  py-2 ">
+        <div class="grid grid-cols-1 gap-1 items-center">
+
+
+
+        </div>
+
+        <div class="flex flex-wrap -mx-2 mb-4 pt-3 px-3  md:pr-2 xl:pr-3 xl:pl-3">
+            <div class="w-full md:w-1/2 lg:w-1/4  mb-4 pt-3 px-3 md:pr-2 xl:pr-3 xl:pl-3">
+                <div class=" text-sm text-grey-dark ">
+                    <form>
+                        <label for="default-search"
+                            class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-300">Search</label>
+                        <div class="relative">
+                            <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                                <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                </svg>
+                            </div>
+                            <input type="search" id="default-search"
+                                class="block p-4 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                placeholder="Search ..." required>
+                            <!-- <button type="submit"
+                                class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button> -->
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 lg:w-1/4 pt-3 px-3 p-4 md:pr-2 xl:pr-3 xl:pl-3 mb-4">
+                <div class=" h-12 text-sm text-grey-dark flex items-center justify-center">
+
+                </div>
+            </div>
+            <div class="w-full md:w-1/2  xl:pr-3 xl:pl-3 ">
+                <div class="text-sm text-grey-dark ">
+
+                    <div class="  w-full flex flex-wrap bg-grey-light">
+                        <div
+                            class="  w-full md:w-1/2 lg:w-1/4 p-4 pt-3 px-3 md:pr-2 xl:pr-3 xl:pl-3 bg-grey grid justify-items-end flex items-center ">
+                            <div class=" relative py-2 ">
+                                <button type="button"
+                                    class="
+                                dropdown-toggle
+                                text-white bg-blue-500  font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 grid justify-items-center    "
+                                    id="menu-button" aria-expanded="true" aria-haspopup="true">
+                                    <i class="fa fa-filter fa-2x"></i>
+                                    <!-- <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-down"
+                                    class="w-2 ml-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 320 512">
+                                    <path fill="currentColor"
+                                        d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z">
+                                    </path>
+                                </svg> -->
+                                </button>
+
+                            </div>
+
+                            <!-- popup options -->
+                            <div class="absolute hidden z-10 mt-2 w-full md:w-1/2 lg:w-1/4 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                                role="menu" style="margin-top:25rem" aria-orientation="vertical"
+                                aria-labelledby="menu-button" tabindex="-1">
+                                <div class="px-7 py-5" role="none">
+                                    <div class="mb-5 p-0 "><label for="wharehouse"
+                                            class="font-sans font-semibold font-xl">Status
+                                        </label>
+                                        <select id="countries"
+                                            class="bg-gray-50 w-1/2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-blue-500 block w-full p-4 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-purple-500">
+                                            <option selected>All</option>
+                                            <option value="US">All</option>
+                                            <option value="CA">Received</option>
+                                            <option value="FR">Ordered</option>
+                                            <option value="DE">UnOrdered</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-5 p-0 ">
+                                        <label for="wharehouse" class="font-sans font-semibold font-xl">Payment Status
+                                        </label>
+                                        <select id="countries"
+                                            class="bg-gray-50 w-1/2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-blue-500 block w-full p-4 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-purple-500">
+                                            <option selected>All</option>
+                                            <option value="CA">Paid</option>
+                                            <option value="FR">UnPaid</option>
+                                            <option value="DE">Partial</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-5 p-0 ">
+                                        <label for="wharehouse" class="font-sans font-semibold font-xl">Payment Type
+                                        </label>
+                                        <select id="countries"
+                                            class="bg-gray-50 w-1/2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-blue-500 block w-full p-4 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-purple-500">
+                                            <option selected>All</option>
+
+                                            <option value="CA">wharehouse2</option>
+                                            <option value="FR">wharehouse3</option>
+                                            <option value="DE">wharehouse4</option>
+                                        </select>
+                                    </div>
+                                    <!-- <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem"
+                                        tabindex="-1" id="menu-item-2">License</a>-->
+                                    <form method="POST" action="#" role="none">
+                                        <button type="submit"
+                                            class="text-gray-200 bg-gray-500  font-bold  text-lg px-6   py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 grid justify-items-center    "
+                                            role="menuitem" tabindex="-1" id="menu-item-3">Reset</button>
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- popup end -->
+                        </div>
+                        <div class="  w-full lg:w-1/4 bg-grey p-4 pt-3 px-3 md:pr-2 xl:pr-3 xl:pl-3">
+                            <button
+                                class="bg-blue-500 hover:bg-blue-700  text-white font-bold uppercase text-sm px-6 h-12 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                                [routerLink]="['/createsale']">
+                                <span>Export Product</span>
+                            </button>
+
+                        </div>
+                        <div class="  w-full lg:w-1/4 bg-grey p-4 pt-3 px-3 md:pr-2 xl:pr-3 xl:pl-3">
+                            <button
+                                class="bg-blue-500 hover:bg-blue-700  text-white font-bold uppercase text-sm px-6 h-12 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                                [routerLink]="['/createsale']">
+                                <span>Import Product</span>
+                            </button>
+                        </div>
+                        <div
+                            class="  w-full md:w-1/2 lg:w-1/4 p-4 pt-3 px-3 md:pr-2 xl:pr-3 xl:pl-3 grid justify-items-end">
+                            <button
+                                class="bg-blue-500 hover:bg-blue-700  text-white font-bold uppercase text-sm px-6 h-12 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                                [routerLink]="['/createsale']">
+                                <span>create sale</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="flex flex-wrap mb-2">
+
+                <div class="w-full  pt-3 px-3 md:pr-2 xl:pr-3 xl:pl-10">
+
+
+                    <div>
+
+                        <div class="flex flex-col">
+                            <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+                                <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+                                    <div class="overflow-hidden">
+                                        <table class="min-w-full">
+                                            <thead class="border-b bg-gray-50">
+                                                <tr>
+                                                    <!-- <th scope="col"
+                                                                class="text-lg font-medium text-gray-500 px-6 py-4 text-left">
+                                                                #
+                                                            </th> -->
+                                                    <th scope="col"
+                                                        class="text-lg font-medium text-gray-500 px-6 py-4 text-center hover:text-blue-500">
+                                                        PRODUCTS
+                                                    </th>
+                                                    <th scope="col"
+                                                        class="text-lg font-medium  text-gray-500 px-6 py-4 text-center hover:text-blue-500">
+                                                        CODE
+                                                    </th>
+                                                    <th scope="col"
+                                                        class="text-lg font-medium text-gray-500 px-6 py-4 text-center hover:text-blue-500">
+                                                        BRAND
+                                                    </th>
+                                                    <th scope="col"
+                                                        class="text-lg font-medium text-gray-500 px-6 py-4 text-center hover:text-blue-500">
+                                                        PRICE
+                                                    </th>
+                                                    <th scope="col"
+                                                        class="text-lg font-medium text-gray-500 px-6 py-4 text-center hover:text-blue-500">
+                                                        PRODUCT UNIT
+                                                    </th>
+
+                                                    <th scope="col"
+                                                        class="text-lg font-medium text-gray-500 px-6 py-4 text-center hover:text-blue-500">
+                                                        IN STOCK
+                                                    </th>
+                                                    <th scope="col"
+                                                        class="text-lg font-medium text-gray-500 px-6 py-4 text-center hover:text-blue-500">
+                                                        CREATED ON
+                                                    </th>
+                                                    <th scope="col"
+                                                        class="text-lg font-medium text-gray-500 px-6 py-4 text-center hover:text-blue-500">
+                                                        ACTION
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr
+                                                    class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+                                                    <!-- <td
+                                                                class="px-6 py-4 whitespace-nowrap text-lg font-medium text-gray-500">
+                                                                1</td> -->
+                                                    <td
+                                                        class="text-lg text-center text-gray-500 font-light px-6 py-4 whitespace-nowrap">
+                                                        <span
+                                                            class="inline-block py-1.5 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-bold   rounded">
+                                                            Apple
+                                                        </span>
+
+                                                    </td>
+                                                    <td
+                                                        class="text-lg  text-center text-red-500 px-6 py-4 whitespace-nowrap">
+                                                        <span
+                                                            class="inline-block py-1.5 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-bold bg-pink-200  rounded">
+                                                            1111
+                                                        </span>
+                                                    </td>
+                                                    <td
+                                                        class="text-lg  text-center text-gray-500 font-light px-6 py-4 whitespace-nowrap">
+                                                        <span
+                                                            class="inline-block py-1.5 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-bold text-gray-500 rounded">
+                                                            colourss</span>
+                                                    </td>
+                                                    <td
+                                                        class="text-lg text-center text-gray-500 font-light px-6 py-4 whitespace-nowrap">
+                                                        $ 500
+                                                    </td>
+                                                    <td
+                                                        class="text-lg text-center text-gray-500 font-light px-6 py-4 whitespace-nowrap">
+                                                        <span
+                                                            class="inline-block py-1.5 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-bold bg-pink-200  rounded">
+                                                            kilograms
+                                                        </span>
+                                                    </td>
+                                                    <td
+                                                        class="text-lg text-center text-gray-500 font-light px-6 py-4 whitespace-nowrap">
+                                                        0
+                                                    </td>
+
+                                                    <td
+                                                        class="text-lg  text-center text-pink-500 font-light px-4 py-4 whitespace-nowrap">
+                                                        <span
+                                                            class="inline-block py-1.5 px-2.5 leading-none text-center whitespace-nowrap align-baseline bg-green-200  rounded">
+                                                            2:31pm 2022-10-10</span>
+                                                    </td>
+                                                    <td>
+                                                        <button id="dropdownMenuIconButton"
+                                                            data-dropdown-toggle="dropdownDots"
+                                                            class="inline-flex items-center pl-2 text-sm font-medium text-center text-blue-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-600 ml-5"
+                                                            type="button">
+                                                            <div class="flex-shrink pl-3" (click)="viewproduct()"><i
+                                                                    class="fa fa-eye fa-1x fa-fw text-green-400"></i>
+                                                            </div>
+                                                            <div class="flex-shrink pl-3" (click)="editproduct()"><i
+                                                                    class="fa fa-file fa-1x fa-fw"></i></div>
+                                                            <div class="flex-shrink pl-3"><i
+                                                                    class="fa fa-trash fa-1x fa-fw text-red-500"></i>
+                                                            </div>
+                                                        </button>
+                                                    </td>
+
+                                                </tr>
+                                                <tr
+                                                    class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+                                                    <!-- <td
+                                                                class="px-6 py-4 whitespace-nowrap text-lg font-medium text-gray-500">
+                                                                2</td> -->
+                                                    <td
+                                                        class="text-lg text-center text-gray-500 font-light px-6 py-4 whitespace-nowrap">
+                                                        <span
+                                                            class="inline-block py-1.5 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-bold   rounded">
+                                                            Apple
+                                                        </span>
+
+                                                    </td>
+                                                    <td
+                                                        class="text-lg  text-center text-red-500 px-6 py-4 whitespace-nowrap">
+                                                        <span
+                                                            class="inline-block py-1.5 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-bold bg-pink-200  rounded">
+                                                            1111
+                                                        </span>
+                                                    </td>
+                                                    <td
+                                                        class="text-lg  text-center text-gray-500 font-light px-6 py-4 whitespace-nowrap">
+                                                        <span
+                                                            class="inline-block py-1.5 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-bold text-gray-500 rounded">
+                                                            colourss</span>
+                                                    </td>
+                                                    <td
+                                                        class="text-lg text-center text-gray-500 font-light px-6 py-4 whitespace-nowrap">
+                                                        $ 500
+                                                    </td>
+                                                    <td
+                                                        class="text-lg text-center text-gray-500 font-light px-6 py-4 whitespace-nowrap">
+                                                        <span
+                                                            class="inline-block py-1.5 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-bold bg-pink-200  rounded">
+                                                            kilograms
+                                                        </span>
+                                                    </td>
+                                                    <td
+                                                        class="text-lg text-center text-gray-500 font-light px-6 py-4 whitespace-nowrap">
+                                                        0
+                                                    </td>
+
+                                                    <td
+                                                        class="text-lg  text-center text-pink-500 font-light px-4 py-4 whitespace-nowrap">
+                                                        <span
+                                                            class="inline-block py-1.5 px-2.5 leading-none text-center whitespace-nowrap align-baseline bg-green-200  rounded">
+                                                            2:31pm 2022-10-10</span>
+                                                    </td>
+                                                    <td>
+                                                        <button id="dropdownMenuIconButton"
+                                                            data-dropdown-toggle="dropdownDots"
+                                                            class="inline-flex items-center pl-2 text-sm font-medium text-center text-blue-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-600 ml-5"
+                                                            type="button">
+                                                            <div class="flex-shrink pl-3"><i
+                                                                    class="fa fa-eye fa-1x fa-fw text-green-400"></i>
+                                                            </div>
+                                                            <div class="flex-shrink pl-3"><i
+                                                                    class="fa fa-file fa-1x fa-fw"></i></div>
+                                                            <div class="flex-shrink pl-3"><i
+                                                                    class="fa fa-trash fa-1x fa-fw text-red-500"></i>
+                                                            </div>
+                                                        </button>
+                                                    </td>
+
+
+
+                                                </tr>
+                                                <tr
+                                                    class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+                                                    <!-- <td
+                                                            class="px-6 py-4 whitespace-nowrap text-lg font-medium text-gray-500">
+                                                            2</td> -->
+                                                    <td
+                                                        class="text-lg text-center text-gray-500 font-light px-6 py-4 whitespace-nowrap">
+                                                        <span
+                                                            class="inline-block py-1.5 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-bold   rounded">
+                                                            orange
+                                                        </span>
+
+                                                    </td>
+                                                    <td
+                                                        class="text-lg  text-center text-red-500 px-6 py-4 whitespace-nowrap">
+                                                        <span
+                                                            class="inline-block py-1.5 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-bold bg-pink-200  rounded">
+                                                            1112
+                                                        </span>
+                                                    </td>
+                                                    <td
+                                                        class="text-lg  text-center text-gray-500 font-light px-6 py-4 whitespace-nowrap">
+                                                        <span
+                                                            class="inline-block py-1.5 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-bold text-gray-500 rounded">
+                                                            colourss</span>
+                                                    </td>
+                                                    <td
+                                                        class="text-lg text-center text-gray-500 font-light px-6 py-4 whitespace-nowrap">
+                                                        $ 500
+                                                    </td>
+                                                    <td
+                                                        class="text-lg text-center text-gray-500 font-light px-6 py-4 whitespace-nowrap">
+                                                        <span
+                                                            class="inline-block py-1.5 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-bold bg-pink-200  rounded">
+                                                            kilograms
+                                                        </span>
+                                                    </td>
+                                                    <td
+                                                        class="text-lg text-center text-gray-500 font-light px-6 py-4 whitespace-nowrap">
+                                                        80
+                                                    </td>
+
+                                                    <td
+                                                        class="text-lg  text-center text-pink-500 font-light px-4 py-4 whitespace-nowrap">
+                                                        <span
+                                                            class="inline-block py-1.5 px-2.5 leading-none text-center whitespace-nowrap align-baseline bg-green-200  rounded">
+                                                            2:31pm 2022-10-10</span>
+                                                    </td>
+                                                    <td>
+                                                        <button id="dropdownMenuIconButton"
+                                                            data-dropdown-toggle="dropdownDots"
+                                                            class="inline-flex items-center pl-2 text-sm font-medium text-center text-blue-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-600 ml-5"
+                                                            type="button">
+                                                            <div class="flex-shrink pl-3"><i
+                                                                    class="fa fa-eye fa-1x fa-fw text-green-400"></i>
+                                                            </div>
+                                                            <div class="flex-shrink pl-3"><i
+                                                                    class="fa fa-file fa-1x fa-fw"></i></div>
+                                                            <div class="flex-shrink pl-3"><i
+                                                                    class="fa fa-trash fa-1x fa-fw text-red-500"></i>
+                                                            </div>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr
+                                                    class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+                                                    <!-- <td
+                                                        class="px-6 py-4 whitespace-nowrap text-lg font-medium text-gray-500">
+                                                        2</td> -->
+                                                    <td
+                                                        class="text-lg text-center text-gray-500 font-light px-6 py-4 whitespace-nowrap">
+                                                        <span
+                                                            class="inline-block py-1.5 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-bold   rounded">
+                                                            Apple
+                                                        </span>
+
+                                                    </td>
+                                                    <td
+                                                        class="text-lg  text-center text-red-500 px-6 py-4 whitespace-nowrap">
+                                                        <span
+                                                            class="inline-block py-1.5 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-bold bg-pink-200  rounded">
+                                                            1111
+                                                        </span>
+                                                    </td>
+                                                    <td
+                                                        class="text-lg  text-center text-gray-500 font-light px-6 py-4 whitespace-nowrap">
+                                                        <span
+                                                            class="inline-block py-1.5 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-bold text-gray-500 rounded">
+                                                            colourss</span>
+                                                    </td>
+                                                    <td
+                                                        class="text-lg text-center text-gray-500 font-light px-6 py-4 whitespace-nowrap">
+                                                        $ 500
+                                                    </td>
+                                                    <td
+                                                        class="text-lg text-center text-gray-500 font-light px-6 py-4 whitespace-nowrap">
+                                                        <span
+                                                            class="inline-block py-1.5 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-bold bg-pink-200  rounded">
+                                                            kilograms
+                                                        </span>
+                                                    </td>
+                                                    <td
+                                                        class="text-lg text-center text-gray-500 font-light px-6 py-4 whitespace-nowrap">
+                                                        0
+                                                    </td>
+
+                                                    <td
+                                                        class="text-lg  text-center text-pink-500 font-light px-4 py-4 whitespace-nowrap">
+                                                        <span
+                                                            class="inline-block py-1.5 px-2.5 leading-none text-center whitespace-nowrap align-baseline bg-green-200  rounded">
+                                                            2:31pm 2022-10-10</span>
+                                                    </td>
+                                                    <td>
+                                                        <button id="dropdownMenuIconButton"
+                                                            data-dropdown-toggle="dropdownDots"
+                                                            class="inline-flex items-center pl-2 text-sm font-medium text-center text-blue-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-600 ml-5"
+                                                            type="button">
+                                                            <div class="flex-shrink pl-3"><i
+                                                                    class="fa fa-eye fa-1x fa-fw text-green-400"></i>
+                                                            </div>
+                                                            <div class="flex-shrink pl-3"><i
+                                                                    class="fa fa-file fa-1x fa-fw"></i></div>
+                                                            <div class="flex-shrink pl-3"><i
+                                                                    class="fa fa-trash fa-1x fa-fw text-red-500"></i>
+                                                            </div>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr
+                                                    class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+                                                    <!-- <td
+                                                    class="px-6 py-4 whitespace-nowrap text-lg font-medium text-gray-500">
+                                                    2</td> -->
+                                                    <td
+                                                        class="text-lg text-center text-gray-500 font-light px-6 py-4 whitespace-nowrap">
+                                                        <span
+                                                            class="inline-block py-1.5 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-bold   rounded">
+                                                            Apple
+                                                        </span>
+
+                                                    </td>
+                                                    <td
+                                                        class="text-lg  text-center text-red-500 px-6 py-4 whitespace-nowrap">
+                                                        <span
+                                                            class="inline-block py-1.5 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-bold bg-pink-200  rounded">
+                                                            1111
+                                                        </span>
+                                                    </td>
+                                                    <td
+                                                        class="text-lg  text-center text-gray-500 font-light px-6 py-4 whitespace-nowrap">
+                                                        <span
+                                                            class="inline-block py-1.5 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-bold text-gray-500 rounded">
+                                                            colourss</span>
+                                                    </td>
+                                                    <td
+                                                        class="text-lg text-center text-gray-500 font-light px-6 py-4 whitespace-nowrap">
+                                                        $ 500
+                                                    </td>
+                                                    <td
+                                                        class="text-lg text-center text-gray-500 font-light px-6 py-4 whitespace-nowrap">
+                                                        <span
+                                                            class="inline-block py-1.5 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-bold bg-pink-200  rounded">
+                                                            kilograms
+                                                        </span>
+                                                    </td>
+                                                    <td
+                                                        class="text-lg text-center text-gray-500 font-light px-6 py-4 whitespace-nowrap">
+                                                        0
+                                                    </td>
+
+                                                    <td
+                                                        class="text-lg  text-center text-pink-500 font-light px-4 py-4 whitespace-nowrap">
+                                                        <span
+                                                            class="inline-block py-1.5 px-2.5 leading-none text-center whitespace-nowrap align-baseline bg-green-200  rounded">
+                                                            2:31pm 2022-10-10</span>
+                                                    </td>
+                                                    <td>
+                                                        <button id="dropdownMenuIconButton"
+                                                            data-dropdown-toggle="dropdownDots"
+                                                            class="inline-flex items-center pl-2 text-sm font-medium text-center text-blue-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-600 ml-5"
+                                                            type="button">
+                                                            <div class="flex-shrink pl-3"><i
+                                                                    class="fa fa-eye fa-1x fa-fw text-green-400"></i>
+                                                            </div>
+                                                            <div class="flex-shrink pl-3"><i
+                                                                    class="fa fa-file fa-1x fa-fw"></i></div>
+                                                            <div class="flex-shrink pl-3"><i
+                                                                    class="fa fa-trash fa-1x fa-fw text-red-500"></i>
+                                                            </div>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr
+                                                    class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+
+                                                    <td
+                                                        class="text-lg text-center text-gray-500 font-light px-6 py-4 whitespace-nowrap">
+                                                        <span
+                                                            class="inline-block py-1.5 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-bold   rounded">
+                                                            Apple
+                                                        </span>
+
+                                                    </td>
+                                                    <td
+                                                        class="text-lg  text-center text-red-500 px-6 py-4 whitespace-nowrap">
+                                                        <span
+                                                            class="inline-block py-1.5 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-bold bg-pink-200  rounded">
+                                                            1111
+                                                        </span>
+                                                    </td>
+                                                    <td
+                                                        class="text-lg  text-center text-gray-500 font-light px-6 py-4 whitespace-nowrap">
+                                                        <span
+                                                            class="inline-block py-1.5 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-bold text-gray-500 rounded">
+                                                            colourss</span>
+                                                    </td>
+                                                    <td
+                                                        class="text-lg text-center text-gray-500 font-light px-6 py-4 whitespace-nowrap">
+                                                        $ 500
+                                                    </td>
+                                                    <td
+                                                        class="text-lg text-center text-gray-500 font-light px-6 py-4 whitespace-nowrap">
+                                                        <span
+                                                            class="inline-block py-1.5 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-bold bg-pink-200  rounded">
+                                                            kilograms
+                                                        </span>
+                                                    </td>
+                                                    <td
+                                                        class="text-lg text-center text-gray-500 font-light px-6 py-4 whitespace-nowrap">
+                                                        0
+                                                    </td>
+
+                                                    <td
+                                                        class="text-lg  text-center text-pink-500 font-light px-4 py-4 whitespace-nowrap">
+                                                        <span
+                                                            class="inline-block py-1.5 px-2.5 leading-none text-center whitespace-nowrap align-baseline bg-green-200  rounded">
+                                                            2:31pm 2022-10-10</span>
+                                                    </td>
+                                                    <td>
+                                                        <button id="dropdownMenuIconButton"
+                                                            data-dropdown-toggle="dropdownDots"
+                                                            class="inline-flex items-center pl-2 text-sm font-medium text-center text-blue-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-600 ml-5"
+                                                            type="button">
+                                                            <div class="flex-shrink pl-3"><i
+                                                                    class="fa fa-eye fa-1x fa-fw text-green-400"></i>
+                                                            </div>
+                                                            <div class="flex-shrink pl-3"><i
+                                                                    class="fa fa-file fa-1x fa-fw"></i></div>
+                                                            <div class="flex-shrink pl-3"><i
+                                                                    class="fa fa-trash fa-1x fa-fw text-red-500"></i>
+                                                            </div>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<!-- sales end -->
