@@ -9,7 +9,10 @@ import { ViewsalesComponent } from './components/pages/dashboard/sales/viewsales
 import { EditsalesComponent } from './components/pages/dashboard/sales/editsales/editsales.component';
 import { Counter1Component } from './components/pages/counters/counter1/counter1.component';
 import { ProductsComponent } from './components/pages/dashboard/products/products.component';
+import { CreateproductComponent } from './components/pages/dashboard/products/createproduct/createproduct.component';
+import { EditproductComponent } from './components/pages/dashboard/products/editproduct/editproduct.component';
 import { PosComponent } from './components/pages/dashboard/pos/pos.component';
+import { ViewProductComponent } from './components/pages/dashboard/products/view-product/view-product.component';
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: "login", component: LoginComponent },
@@ -21,6 +24,9 @@ const routes: Routes = [
   { path: "editsale", component: EditsalesComponent },
   { path: "counter", component: Counter1Component },
   { path: "dashboard/product", component: ProductsComponent },
+  { path: "createproduct", component: CreateproductComponent },
+  { path: "editproduct", component: EditproductComponent },
+  { path: "viewproduct", component: ViewProductComponent },
   { path: "dashboard/pos", component: PosComponent }
 ];
 

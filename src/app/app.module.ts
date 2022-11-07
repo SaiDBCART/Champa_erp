@@ -21,7 +21,9 @@ import { Counter1Component } from './components/pages/counters/counter1/counter1
 import { ViewsalesComponent } from './components/pages/dashboard/sales/viewsales/viewsales.component';
 import { EditsalesComponent } from './components/pages/dashboard/sales/editsales/editsales.component';
 import { ProductsComponent } from './components/pages/dashboard/products/products.component';
-
+import { CreateproductComponent } from './components/pages/dashboard/products/createproduct/createproduct.component';
+import { EditproductComponent } from './components/pages/dashboard/products/editproduct/editproduct.component';
+import { ViewProductComponent } from './components/pages/dashboard/products/view-product/view-product.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,6 +39,9 @@ import { ProductsComponent } from './components/pages/dashboard/products/product
     ViewsalesComponent,
     EditsalesComponent,
     ProductsComponent,
+    CreateproductComponent,
+    EditproductComponent,
+    ViewProductComponent
 
   ],
   imports: [
