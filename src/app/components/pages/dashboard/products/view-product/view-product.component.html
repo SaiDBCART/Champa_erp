@@ -1,0 +1,216 @@
+<app-header></app-header>
+<!-- view-sales start -->
+<section [ngClass]="{ 'md:pl-20': this.isNavMinimized,  'md:pl-64': !this.isNavMinimized  }" class="pl-20   ">
+    <div class="grid grid-cols-1 gap-1 items-center">
+
+        <div class=" grid grid-cols-2 gap-4  items-center py-4   xl:pl-5">
+            <div><span class="text-black-500 text-3xl  font-weight-600 font-light    text-3xl   ">
+                    Product Details
+                </span></div>
+            <div class="grid justify-items-end "> <button
+                    class="bg-transparent hover:bg-blue-500 justify-items-end text-blue-500  font-semibold outline-blue-500  hover:text-white border border-blue-500  hover:border-transparent rounded   rounded w-20 h-12 mr-9 float-right   "
+                    [routerLink]="['/products']">
+                    <span>Back</span>
+                </button></div>
+        </div>
+    </div>
+
+
+    <div class="bg-white p-10 m-5 h-full">
+
+
+        <div class="container  mx-auto px-4 md:px-12">
+            <div class="grid grid-cols-2 gap-1 items-center">
+                <div class="flex flex-wrap -mx-1 lg:-mx-4">
+
+                    <!-- Column -->
+                    <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+
+                        <!-- Article -->
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQkAAAC+CAMAAAARDgovAAAAflBMVEX39/cAAAACAgL////4+Pj8/PypqanW1tbv7++ysrJRUVGcnJxWVlZfX1/IyMiXl5fi4uK6urrPz88vLy/e3t5KSkro6OiJiYlnZ2ckJCQ1NTVubm5BQUEXFxfKysp7e3s7OzuPj48NDQ2/v78cHByCgoJ1dXUlJSWkpKSyzOI5r+8uAAAJ1UlEQVR4nO2d65baOhKFLSSBMTcDtqGB5n6b93/BqdLFkmhI0mRyTmatvX80bVuWVJ/KVWWTuLMMgiAIgiAIgiAI+lNSrH97En+B/lNWZVU1QAFBEARBEARBEARBEARBEARBEARBEARBEARBEARBEARBEPQXSUvtfvAHSSn+aXdq3e7l43SEt5X9DEfMpwyn+ZahEX3aw7Yj2lBauaGTc61c83BaptwRd7rS7U5tB1P+2NsgunVf61m94HlM6+GwLiv+edL6tBn0aLfuFrTN/yxe5cWQthe9qr4aJCdu2VO6Ty2M6rHW081dq6reaTfAhQ6uid5yOCwWcpTzfPW6znflvZ5qPa79uWYe9ncixs13MlO0VRy0aswQhZlHRr24UYqCZlpt1kShKPLfQqEnYkDTESPJVASp6vFPmlZfXGZLyS1IJZNohKA5jmY9sTEk+nxkpvVAeJFpXXGRuidq5xSyoN0rInGmz5EUlsRcNHV1EV1t+zCieZzcrzTKjT5qclDeJENLd8SSOOZdseBReKayJ/ZEQoj/KYlOh0nQz4RE5wuJ2pHoOBIdK0vCzLHwJIbUiEl80OfSk1iJpqgWTGLanmtImN94lDk1LwyJjiNhjlgSny0JGlLywoAESIAESIAESIAESIAESIAESIAESIDEP0+iDxLwCZAACZAACZAACZAACZAACZAACZAACZAACZAACZAACZAACZAACZAACZAACZAACZAACZAACZAACZAACZAACZAACZAACZAACZAACZAACZAACZAACZD4/vusPImn77N6JCEcCZGQcO+zmr54n9WcPopX77MKJMQf//+i08QnOmYGROL46BOdZz6hdXizl2af2GuV3YxPfFoS++c+MbY+waOsqPmQSBy9T9hGlsRH7kbp/Bmf+NX33unkvXdf312XvvfOvcDOvrgueu+d/KX33vnJ/OC9d/oPkLBSpN/p8p/W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"
+                            alt="">
+                        <!-- END Article -->
+
+                    </div>
+                    <!-- END Column -->
+
+                    <!-- Column -->
+                    <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+
+                        <!-- Article -->
+
+
+                    </div>
+                    <!-- END Column -->
+
+                    <!-- Column -->
+                    <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- <div class="grid grid-cols-6 gap-4  my-8 mx-auto px-4 md:px-12">
+
+            <div class=" w-1/2 overflow-x-auto relative sm:rounded-lg col-start-1 col-end-7">
+
+                <table class="text-base text-left text-gray-300 dark:text-gray-400  ">
+                    <tbody class=" text-gray-700 uppercase bg-white-50 dark:bg-gray-700 dark:text-gray-600 ">
+                        <tr class="border-b">
+                            <th scope="col" class="py-3 px-9">Code Product</th>
+                            <td scope="col" class="py-3 px-6">78600</td>
+                        </tr>
+                        <tr class="border-b">
+                            <th scope="col" class="py-3 px-9">Product</th>
+                            <td scope="col" class="py-3 px-6">LPG GAS</td>
+                        </tr>
+                        <tr class="border-b">
+                            <th scope="col" class="py-3 px-9">Category</th>
+                            <td scope="col" class="py-3 px-6"> Gas</td>
+                        </tr>
+                        <tr class="border-b">
+                            <th scope="col" class="py-3 px-9">Brand</th>
+                            <td scope="col" class="py-3 px-6">SUPER GAS</td>
+                        </tr>
+                        <tr class="border-b">
+                            <th scope="col" class="py-3 px-9">Cost</th>
+                            <td scope="col" class="py-3 px-6">$ 100.00</td>
+                        </tr>
+                        <tr class="border-b">
+                            <th scope="col" class="py-3 px-9">Price</th>
+                            <td scope="col" class="py-3 px-6">$ 120.00</td>
+                        </tr>
+                        <tr class="border-b">
+                            <th scope="col" class="py-3 px-9">Unit</th>
+                            <td scope="col" class="py-3 px-6"><span
+                                    class="inline-block py-1.5 px-2.5 leading-none text-blue-600 text-center whitespace-nowrap align-baseline bg-green-200  rounded"><span>Meter</span></span>
+                            </td>
+                        </tr>
+                        <tr class="border-b">
+                            <th scope="col" class="py-3 px-9">Tax</th>
+                            <td scope="col" class="py-3 px-6">2 %</td>
+                        </tr>
+                        <tr class="border-b">
+                            <th scope="col" class="py-3 px-9">Stock Alert</th>
+                            <td scope="col" class="py-3 px-6">10</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+        </div> -->
+        <div clas="grid grid-cols-3 gap-2">
+            <div class="md:flex -mx-2 ">
+                <div class="md:w-full lg:w-3/5 px-2">
+
+                    <table class="text-base w-full text-left text-gray-300 dark:text-gray-400  ">
+                        <tbody class=" text-gray-700 uppercase bg-white-50 dark:bg-gray-700 dark:text-gray-600 ">
+                            <tr class="border-b">
+                                <th scope="col" class="py-3 px-9">Code Product</th>
+                                <td scope="col" class="py-3 px-6">78600</td>
+                            </tr>
+                            <tr class="border-b">
+                                <th scope="col" class="py-3 px-9">Product</th>
+                                <td scope="col" class="py-3 px-6">LPG GAS</td>
+                            </tr>
+                            <tr class="border-b">
+                                <th scope="col" class="py-3 px-9">Category</th>
+                                <td scope="col" class="py-3 px-6"> Gas</td>
+                            </tr>
+                            <tr class="border-b">
+                                <th scope="col" class="py-3 px-9">Brand</th>
+                                <td scope="col" class="py-3 px-6">SUPER GAS</td>
+                            </tr>
+                            <tr class="border-b">
+                                <th scope="col" class="py-3 px-9">Cost</th>
+                                <td scope="col" class="py-3 px-6">$ 100.00</td>
+                            </tr>
+                            <tr class="border-b">
+                                <th scope="col" class="py-3 px-9">Price</th>
+                                <td scope="col" class="py-3 px-6">$ 120.00</td>
+                            </tr>
+                            <tr class="border-b">
+                                <th scope="col" class="py-3 px-9">Unit</th>
+                                <td scope="col" class="py-3 px-6"><span
+                                        class="inline-block py-1.5 px-2.5 leading-none text-blue-600 text-center whitespace-nowrap align-baseline bg-green-200  rounded"><span>Meter</span></span>
+                                </td>
+                            </tr>
+                            <tr class="border-b">
+                                <th scope="col" class="py-3 px-9">Tax</th>
+                                <td scope="col" class="py-3 px-6">2 %</td>
+                            </tr>
+                            <tr class="border-b">
+                                <th scope="col" class="py-3 px-9">Stock Alert</th>
+                                <td scope="col" class="py-3 px-6">10</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+                </div>
+
+                <div class="md:w-full lg:w-2/5 px-2 flex items-center place-content-center">
+                    <div class="bg-white ">
+
+                        <div class="">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn_QlZmzNryaaw9U948e0W9Kzivlt3Ga5SYgTc1mIajW8DVUQ9zRyP6ZH4Kjte8I0hKU8&usqp=CAU"
+                                alt="">
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <!-- <div class="container my-12 mx-auto px-4 md:px-12">
+            <div class="flex flex-wrap -mx-1 lg:-mx-4">
+
+
+                <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+                    <div class=" px-2">
+                        <div class="w-full">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn_QlZmzNryaaw9U948e0W9Kzivlt3Ga5SYgTc1mIajW8DVUQ9zRyP6ZH4Kjte8I0hKU8&usqp=CAU" alt="">
+                        </div>
+                        
+                    </div>
+
+                </div>
+                <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+                    <div class="w-1/3 px-2">
+                    </div>
+
+                </div>
+                <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+
+                    <div class=" my-12 mx-auto px-4 ">
+                        <div class="overflow-x-auto relative shadow-md sm:rounded-lg ">
+                            
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div> -->
+    <!-- <div class="grid grid-cols-1 gap-1 items-center">
+            <div class="">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn_QlZmzNryaaw9U948e0W9Kzivlt3Ga5SYgTc1mIajW8DVUQ9zRyP6ZH4Kjte8I0hKU8&usqp=CAU"
+                    alt="">
+            </div>
+        </div>
+ -->
+
+
+
+</section>
+
+<!-- view-sales end -->
