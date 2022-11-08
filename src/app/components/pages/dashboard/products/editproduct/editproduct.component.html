@@ -82,33 +82,38 @@
     <div class="flex flex-col ">
         <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
             <div class="py-2 min-w-full sm:px-6 lg:px-8">
-                <div class="overflow-hidden sm:1/3 ">
+                <div class="overflow-hidden">
                     <form action="">
                         <div class="min-w-300 bg-white ml-5 p-10">
                             <div clas="grid grid-cols-3 gap-2">
                                 <div class="md:flex -mx-2 ">
                                     <div class="md:w-full lg:w-1/3 px-2">
 
-                                        <label for="wharehouse"
-                                            class="text-black-500 font-weight-500 font-semibold">Name <span
-                                                class="text-red-500 ">*</span> </label>
-
-                                        <div class="relative">
+                                        <label for="Shipping" class="text-black-500 font-weight-500 font-semibold">Name:
+                                        </label>
+                                        <div class="relative w-full mt-4 rounded-md shadow-sm">
 
                                             <input type="text"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 blue w-full pl-10 p-4 dark:bg-gray-700 dark:border-gray-600 blue:placeholder-gray-400 blue:text-white blue:focus:ring-blue-500 dark:focus:border-blue-500 "
+                                                class="bg-white-50 border border-gray-300 text-gray-400 text-sm rounded-lg block w-full p-5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-purple-500"
                                                 placeholder="Enter Name">
-                                        </div>
 
+
+                                        </div>
                                     </div>
                                     <div class="md:w-full lg:w-1/3 px-2">
                                         <div class="bg-white ">
-                                            <label for="wharehouse"
-                                                class="text-black-500 font-weight-500 font-semibold">Code <span
-                                                    class="text-red-500 ">*</span> </label>
-                                            <input type="text"
-                                                class="bg-white-50 border  text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 blue w-full pl-10 p-4 dark:bg-gray-700 dark:border-gray-600 blue:placeholder-gray-400 blue:text-white blue:focus:ring-blue-500 dark:focus:border-blue-500 "
-                                                placeholder="Enter code">
+
+                                            <label for="Shipping"
+                                                class="text-black-500 font-weight-500 font-semibold">Code:
+                                            </label>
+                                            <div class="relative w-full mt-4 rounded-md shadow-sm">
+
+                                                <input type="text"
+                                                    class="bg-white-50 border border-gray-300 text-gray-400 text-sm rounded-lg block w-full p-5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-purple-500"
+                                                    placeholder="Enter Code">
+
+
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="md:w-full lg:w-1/3 px-2">
@@ -116,7 +121,7 @@
                                             <label for="wharehouse"
                                                 class="text-black-500 font-weight-500 font-semibold">Upload File <span
                                                     class="text-red-500 ">*</span> </label>
-                                            <div class="relative w-full  rounded-md ">
+                                            <div class="relative w-full mt-4  rounded-md ">
 
                                                 <input
                                                     class="block w-full text-sm text-gray-900 bg-gray-50 p-2 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
@@ -130,184 +135,200 @@
                                     </div>
                                 </div>
                             </div>
+                            <div clas="grid grid-cols-3 gap-2">
+                                <div class="md:flex -mx-2 ">
+                                    <div class="md:w-full lg:w-1/3 px-2 p-4">
+
+                                        <label for="wharehouse"
+                                            class="text-black-500 font-weight-500 font-semibold">Product category:
+                                            <span class="text-red-500 ">*</span> </label>
+                                        <select id="countries"
+                                            class="bg-white-50 border border-gray-300 text-gray-400 text-sm rounded-lg block w-full p-5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-purple-500">
+                                            <option selected>Received</option>
+                                            <option value="US">Pending</option>
+                                            <option value="CA">Ordered</option>
+
+                                        </select>
+
+                                    </div>
+                                    <div class="md:w-full lg:w-1/3 px-2 p-4">
+
+                                        <label for="wharehouse"
+                                            class="text-black-500 font-weight-500 font-semibold">Brand
+                                            <span class="text-red-500 ">*</span> </label>
+                                        <select id="countries"
+                                            class="bg-white-50 border border-gray-300 text-gray-400 text-sm rounded-lg block w-full p-5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-purple-500">
+                                            <option selected>Choose</option>
+                                            <option value="US">PAID</option>
+                                            <option value="CA">unpaid</option>
+
+                                        </select>
+
+                                    </div>
+
+
+                                </div>
+                            </div>
 
                             <div clas="grid grid-cols-3 gap-2">
                                 <div class="md:flex -mx-2 ">
                                     <div class="md:w-full lg:w-1/3 px-2 p-4">
 
                                         <label for="wharehouse"
-                                            class="text-black-500 font-weight-500 font-semibold">Product Category <span
-                                                class="text-red-500 ">*</span> </label>
-
+                                            class="text-black-500 font-weight-500 font-semibold">Barcode Symbolgy::
+                                            <span class="text-red-500 ">*</span> </label>
                                         <select id="countries"
                                             class="bg-white-50 border border-gray-300 text-gray-400 text-sm rounded-lg block w-full p-5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-purple-500">
-                                            <option selected>Choose a Product category</option>
-                                            <option value="Fruits">Fruits</option>
-                                            <option value="Shoes">Shoes</option>
-                                            <option value="Computer">Computer</option>
-                                            <option value="T-shirt">T-shirt</option>
-                                            <option value="mobile">Mobile</option>
-                                            <option value="laptop">Laptop</option>
+                                            <option selected>Choose a Barcode Symbolgy</option>
+                                            <option value="c128">Code 128</option>
+                                            <option value="c39">Code 39</option>
+                                            <option value="FR">wharehouse3</option>
+                                            <option value="DE">wharehouse4</option>
+                                        </select>
+                                    </div>
+                                    <div class="md:w-full lg:w-1/3 px-2 p-4">
+
+                                        <label for="wharehouse"
+                                            class="text-black-500 font-weight-500 font-semibold">product cost:
+                                            <span class="text-red-500 ">*</span> </label>
+
+                                        <div class="relative w-full rounded-md shadow-sm">
+                                            <div
+                                                class="pointer-events-none  bg-gray-200  rounded-lg border absolute inset-y-0 left-0 flex items-center pl-3 pr-3">
+                                                <span class="text-gray-500  sm:text-lg"><i class="fa  fa-usd">
+                                                    </i></span>
+                                            </div>
+                                            <input type="text" id="simple-search"
+                                                class="bg-white-900 border border-white-900 text-center text-gray-900 p-3 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10  "
+                                                placeholder="Enter Product Cost" required="">
+
+
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                            <div clas="grid grid-cols-3 gap-2">
+                                <div class="md:flex -mx-2 ">
+                                    <div class="md:w-full lg:w-1/3 px-2 p-4">
+
+                                        <label for="wharehouse"
+                                            class="text-black-500 font-weight-500 font-semibold">Product Unit
+                                            <span class="text-red-500 ">*</span> </label>
+                                        <select id="countries"
+                                            class="bg-white-50 border border-gray-300 text-gray-400 text-sm rounded-lg block w-full p-5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-purple-500">
+                                            <option selected>Choose a Product unit</option>
+                                            <option value="piece">piece</option>
+                                            <option value="meter">Meter</option>
+                                            <option value="kg">kilograms</option>
+
+                                        </select>
+                                    </div>
+                                    <div class="md:w-full lg:w-1/3 px-2 p-4">
+
+                                        <label for="wharehouse"
+                                            class="text-black-500 font-weight-500 font-semibold">Product Price:
+                                            <span class="text-red-500 ">*</span> </label>
+
+                                        <div class="relative w-full rounded-md shadow-sm">
+                                            <div
+                                                class="pointer-events-none  bg-gray-200  rounded-lg border absolute inset-y-0 left-0 flex items-center pl-3 pr-3">
+                                                <span class="text-gray-500  sm:text-lg"><i class="fa  fa-usd">
+                                                    </i></span>
+                                            </div>
+                                            <input type="text" id="simple-search"
+                                                class="bg-white-900 border border-white-900 text-center text-gray-900 p-3 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10  "
+                                                placeholder="Enter Product Price" required="">
+
+
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                            <div clas="grid grid-cols-3 gap-2">
+                                <div class="md:flex -mx-2 ">
+                                    <div class="md:w-full lg:w-1/3 px-2 p-4">
+
+                                        <label for="wharehouse"
+                                            class="text-black-500 font-weight-500 font-semibold">Sale unit:
+                                            <span class="text-red-500 ">*</span> </label>
+                                        <select id="countries"
+                                            class="bg-white-50 border border-gray-300 text-gray-400 text-sm rounded-lg block w-full p-5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-purple-500">
+                                            <option selected>Choose a Sale unit</option>
+                                            <option value="US">*no option*</option>
+
                                         </select>
 
                                     </div>
                                     <div class="md:w-full lg:w-1/3 px-2 p-4">
-                                        <div class="bg-white ">
-                                            <label for="wharehouse"
-                                                class="text-black-500 font-weight-500 font-semibold">Brand <span
-                                                    class="text-red-500 ">*</span> </label>
-                                            <select id="countries"
-                                                class="bg-white-50 border border-gray-300 text-gray-400 text-sm rounded-lg block w-full p-5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-purple-500 ">
-                                                <option selected>Choose a Brand</option>
-                                                <option value="Colors">Colors</option>
-                                                <option value="Lion">Lion</option>
-                                                <option value="Laptop">Laptop</option>
-                                                <option value="A&scompany">A&s company</option>
-                                            </select>
-                                        </div>
-                                    </div>
 
-                                </div>
-                            </div>
-
-
-                            <div clas="grid grid-cols-3 gap-2">
-                                <div class="md:flex -mx-2 ">
-                                    <div class="md:w-full lg:w-1/3 px-2">
-
-                                        <label for="wharehouse" class="text-black-500 font-weight-500 font-semibold">
-                                            BarCode Symbology <span class="text-red-500 ">*</span> </label>
-
+                                        <label for="wharehouse"
+                                            class="text-black-500 font-weight-500 font-semibold">Purchase unit:
+                                            <span class="text-red-500 ">*</span> </label>
                                         <select id="countries"
                                             class="bg-white-50 border border-gray-300 text-gray-400 text-sm rounded-lg block w-full p-5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-purple-500">
-                                            <option selected>Choose a Barcode Symbolgy</option>
-                                            <option value="c128">Code 128</option>
-                                            <option value="c39">Code 39</option>
-                                            <option value="FR">wharehouse3</option>
-                                            <option value="DE">wharehouse4</option>
-                                        </select>
-
-                                    </div>
-                                    <div class="md:w-full lg:w-1/3 px-2">
-                                        <div class="bg-white ">
-                                            <label for="wharehouse"
-                                                class="text-black-500 font-weight-500 font-semibold">Product Cost <span
-                                                    class="text-red-500 ">*</span> </label>
-                                            <select id="countries"
-                                                class="bg-white-50 border border-gray-300 text-gray-400 text-sm rounded-lg block w-full p-5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-purple-500">
-                                                <option selected>Choose a Brand</option>
-                                                <option value="Colors">Colors</option>
-                                                <option value="Lion">Lion</option>
-                                                <option value="Laptop">Laptop</option>
-                                                <option value="A&scompany">A&s company</option>
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-
-
-                            <div clas="grid grid-cols-3 gap-2">
-                                <div class="md:flex -mx-2 ">
-                                    <div class="md:w-full lg:w-1/3 px-2">
-
-                                        <label for="wharehouse" class="text-black-500 font-weight-500 font-semibold">
-                                            Product Price <span class="text-red-500 ">*</span> </label>
-
-                                        <select id="countries"
-                                            class="bg-white-50 border border-gray-300 text-gray-400 text-sm rounded-lg block w-full p-5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-purple-500">
-                                            <option selected>Choose a Barcode Symbolgy</option>
-                                            <option value="c128">Code 128</option>
-                                            <option value="c39">Code 39</option>
-                                            <option value="FR">wharehouse3</option>
-                                            <option value="DE">wharehouse4</option>
-                                        </select>
-
-                                    </div>
-                                    <div class="md:w-full lg:w-1/3 px-2">
-                                        <div class="bg-white ">
-                                            <label for="wharehouse"
-                                                class="text-black-500 font-weight-500 font-semibold">Product Cost <span
-                                                    class="text-red-500 ">*</span> </label>
-                                            <select id="countries"
-                                                class="bg-white-50 border border-gray-300 text-gray-400 text-sm rounded-lg block w-full p-5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-purple-500">
-                                                <option selected>Choose a Brand</option>
-                                                <option value="Colors">Colors</option>
-                                                <option value="Lion">Lion</option>
-                                                <option value="Laptop">Laptop</option>
-                                                <option value="A&scompany">A&s company</option>
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="grid grid-cols-3 gap-4 ">
-                                <div class="mt-3">
-                                    <div class="pr-3">
-                                        <label for="wharehouse" class="font-semibold">Sale unit:
-                                            <span class="required"> *</span></label>
-                                        <select id="countries"
-                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-blue-500 block w-full p-4 m-3 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-purple-500">
-                                            <option selected>Choose a Sale unit</option>
-                                            <option value="US">**no option** </option>
-                                            <!-- <option value="CA">wharehouse2</option>
-                                        <option value="FR">wharehouse3</option>
-                                        <option value="DE">wharehouse4</option> -->
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="mt-3">
-                                    <div class="pr-3">
-                                        <label for="wharehouse" class="font-semibold">Purchase unit:
-                                            <span class="text-red-500"> *</span></label>
-                                        <select id="countries"
-                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-blue-500 block w-full p-4 m-6 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-purple-500 ">
                                             <option selected>Choose a Purchase unit</option>
-                                            <option value="US">**no option**</option>
-                                            <!-- <option value="CA">wharehouse2</option>
-                                        <option value="FR">wharehouse3</option>
-                                        <option value="DE">wharehouse4</option> -->
+                                            <option value="US">*no option*</option>
                                         </select>
+
                                     </div>
+
+
                                 </div>
                             </div>
-                            <div class="grid grid-cols-3 gap-4 ">
-                                <div class="flex">
-                                    <div class="mb-3 xl:w-96">
-                                        <label for="" class="pb-4 pt-4">Stock Alert:</label>
-                                        <div class="input-group relative flex flex-wrap items-stretch w-full mt-3">
+
+
+
+
+
+                            <div clas="grid grid-cols-3 gap-2">
+                                <div class="md:flex -mx-2 ">
+                                    <div class="md:w-full lg:w-1/3 px-2">
+
+                                        <label for="Shipping" class="text-black-500 font-weight-500 font-semibold">Stock
+                                            Alert:
+                                        </label>
+                                        <div class="relative w-full  rounded-md shadow-sm">
 
                                             <input type="number"
-                                                class="form-control relative flex-auto min-w-0 block w-full px-3 py-3 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                                                placeholder="0.001" aria-label="" aria-describedby="button-addon2">
+                                                class="bg-white-50 border border-gray-300 text-gray-400 text-sm rounded-lg block w-full p-5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-purple-500"
+                                                placeholder="Enter Name">
+
 
                                         </div>
                                     </div>
-                                </div>
-                                <div class="flex">
-                                    <div class="mb-3 xl:w-96">
-                                        <label for="" class="pb-4 pt-4">Order Tax:</label>
-                                        <div class="input-group relative flex flex-wrap items-stretch w-full mt-3">
+                                    <div class="md:w-full lg:w-1/3 px-2">
+                                        <div class="bg-white ">
 
-                                            <input type="text"
-                                                class="form-control relative flex-auto min-w-0 block w-60 px-3 py-3 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                                                placeholder="0" aria-label="" aria-describedby="button-addon2">
-                                            <button
-                                                class="btn inline-block px-6 py-2.5 bg-gray-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-lightgray-700 hover:shadow-lg focus:bg-gray-700  focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-800 active:shadow-lg transition duration-150 ease-in-out flex items-center"
-                                                type="button" id="button-addon2">
-                                                <!-- <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="w-4" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                            <path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
-                                          </svg> -->
-                                                $
-                                            </button>
+                                            <label for="Shipping"
+                                                class="text-black-500 font-weight-500 font-semibold">Order Tax:
+                                            </label>
+                                            <div class="relative w-full \ rounded-md shadow-sm">
+                                                <div
+                                                    class="pointer-events-none  bg-gray-200  rounded-lg border absolute inset-y-0 left-0 flex items-center pl-3 pr-3">
+                                                    <span class="text-gray-500  sm:text-lg"><i
+                                                            class="fa fa-thin fa-percent">
+                                                        </i></span>
+                                                </div>
+                                                <input type="text" id="simple-search"
+                                                    class="bg-white-900 border border-white-900 text-center text-gray-900 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-4 "
+                                                    placeholder="Tax" required="">
+
+
+                                            </div>
                                         </div>
                                     </div>
+
                                 </div>
                             </div>
+
 
 
 
@@ -326,41 +347,46 @@
 
                             </div>
                         </div>  -->
-                            <div class="grid grid-cols-3 gap-4 ">
-                                <div class="mt-3">
-                                    <div class="pr-3">
-                                        <label for="wharehouse" class="font-semibold">Tax Type:
-                                            <span class="required"> *</span></label>
-                                        <select id="countries"
-                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-blue-500 block w-full p-4 m-6 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-purple-500">
-                                            <option selected></option>
-                                            <option value="US">Exclusive</option>
-                                            <option value="US">InExclusive</option>
-                                            <!-- <option value="CA">wharehouse2</option>
+                            <div clas="grid grid-cols-3 gap-2">
+                                <div class="md:flex -mx-2 ">
+                                    <div class="md:w-full lg:w-1/3 px-2 p-4">
+                                        <div class="bg-white ">
+                                            <label for="wharehouse"
+                                                class="text-black-500 font-weight-500 font-semibold">Tax Type:
+                                                <span class="text-red-500 ">*</span> </label>
+                                            <select id="countries"
+                                                class="bg-white-50 border border-gray-300 text-gray-400 text-sm rounded-lg block w-full p-5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-purple-500">
+
+                                                <option selected value="US">Exclusive</option>
+                                                <option value="US">InExclusive</option>
+                                                <!-- <option value="CA">wharehouse2</option>
                                         <option value="FR">wharehouse3</option>
                                         <option value="DE">wharehouse4</option> -->
-                                        </select>
+                                            </select>
+                                        </div>
                                     </div>
                                 </div>
-
                             </div>
-                            <div class="grid grid-cols-2 gap-1 ">
-                                <div class="">
+                            <div clas="grid grid-cols-3 gap-2">
+                                <div class="md:flex -mx-2 ">
+                                    <div class="md:w-full lg:w-1/2 px-2 p-4">
 
-                                    <label for="message"
-                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Note:
-                                    </label>
-                                    <textarea id="message" rows="4"
-                                        class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                        placeholder="Enter Notes"></textarea>
-
+                                        <label for="message"
+                                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Note:
+                                        </label>
+                                        <textarea id="message" rows="4"
+                                            class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                            placeholder="Enter Notes"></textarea>
+                                    </div>
                                 </div>
                             </div>
+
                             <div class="ml-19">
                                 <button
                                     class="bg-blue-500 hover:bg-blue-700 m-5 text-white font-bold py-2 px-4 border border-blue-700 rounded">
                                     Save
                                 </button>
+
                                 <button
                                     class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 border border-gray-700 rounded">
                                     Cancel
@@ -375,6 +401,7 @@
             </div>
         </div>
     </div>
+
 
 
 
