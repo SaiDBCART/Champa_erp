@@ -141,25 +141,25 @@
                             </div>
                             <!-- popup end -->
                         </div>
-                        <div class="  w-full lg:w-1/4 bg-grey p-4 pt-3 px-3 md:pr-2 xl:pr-3 xl:pl-3">
+                        <div class="  w-full flex items-center lg:w-1/4 bg-grey p-4 pt-3 px-3 md:pr-2 xl:pr-3 xl:pl-3">
                             <button
-                                class="bg-blue-500 hover:bg-blue-700  text-white font-bold uppercase text-sm px-6 h-12 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                                class="bg-blue-500 hover:bg-blue-700  text-white font-normal uppercase text-sm px-6 h-10 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                                 [routerLink]="['/createsale']">
                                 <span>Export Product</span>
                             </button>
 
                         </div>
-                        <div class="  w-full lg:w-1/4 bg-grey p-4 pt-3 px-3 md:pr-2 xl:pr-3 xl:pl-3">
+                        <div class="  w-full flex items-center lg:w-1/4 bg-grey p-4 pt-3 px-3 md:pr-2 xl:pr-3 xl:pl-3">
                             <button
-                                class="bg-blue-500 hover:bg-blue-700  text-white font-bold uppercase text-sm px-6 h-12 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                                class="bg-blue-500 hover:bg-blue-700  text-white font-normal uppercase text-sm px-6 h-10 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                                 [routerLink]="['/createsale']">
                                 <span>Import Product</span>
                             </button>
                         </div>
                         <div
-                            class="  w-full md:w-1/2 lg:w-1/4 p-4 pt-3 px-3 md:pr-2 xl:pr-3 xl:pl-3 grid justify-items-end">
+                            class="  w-full  flex items-center md:w-1/2 lg:w-1/4 p-4 pt-3 px-3 md:pr-2 xl:pr-3 xl:pl-3 grid justify-items-end">
                             <button
-                                class="bg-blue-500 hover:bg-blue-700  text-white font-bold uppercase text-sm px-6 h-12 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                                class="bg-blue-500 hover:bg-blue-700  text-white font-normal uppercase text-sm px-6 h-12 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                                 [routerLink]="['/createproduct']">
                                 <span>create Product</span>
                             </button>
@@ -190,30 +190,40 @@
                                                 <!-- Position Column -->
                                                 <ng-container matColumnDef="code"
                                                     class="border-b bg-gray-50 transition duration-300 ease-in-out hover:bg-gray-100">
-                                                    <th class="text-lg font-medium text-gray-500 border-b bg-gray-50 px-6 py-4 text-center hover:text-blue-500 transition duration-300 ease-in-out hover:bg-gray-100"
+                                                    <th class="text-sm  font-normal text-gray-500 border-b bg-gray-50 px-6 py-4 text-center hover:text-blue-500 transition duration-300 ease-in-out hover:bg-gray-100"
                                                         mat-header-cell *matHeaderCellDef mat-sort-header
                                                         sortActionDescription="Sort by number">
                                                         CODE
                                                     </th>
                                                     <td class="text-sm bg-white text-red-500 font-light  whitespace-nowrap"
                                                         mat-cell *matCellDef="let element"> <span
-                                                            class="inline-block py-1.5 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-bold bg-pink-200  rounded">
+                                                            class="inline-block py-1.5 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-normal bg-pink-200  rounded">
                                                             {{element.reference}} </span></td>
                                                 </ng-container>
 
                                                 <!-- Name Column -->
                                                 <ng-container matColumnDef="name">
-                                                    <th class="text-lg font-medium text-gray-500 border-b bg-gray-50 px-6 py-4 text-center hover:text-blue-500"
+                                                    <th class="text-sm  font-normal text-gray-500 border-b bg-gray-50 px-6 py-4 text-center hover:text-blue-500"
                                                         mat-header-cell *matHeaderCellDef mat-sort-header
                                                         sortActionDescription="Sort by name">
                                                         PRODUCT
                                                     </th>
                                                     <td class="text-sm bg-white text-gray-500 font-light  whitespace-nowrap"
                                                         mat-cell *matCellDef="let element">
-                                                        {{element.name}} </td>
+                                                        <div class="flex items-center space-x-4">
+                                                            <img class="w-10 h-10 rounded-full"
+                                                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjqcy7V5IRCC0XDmioZZRTOj3Gdb42X2ueVg&usqp=CAU"
+                                                                alt="">
+                                                            <div class="font-medium dark:text-white">
+                                                                <div>{{element.name}}</div>
+
+                                                            </div>
+                                                        </div>
+
+                                                    </td>
                                                 </ng-container>
                                                 <ng-container matColumnDef="brand">
-                                                    <th class="text-lg font-medium text-gray-500 border-b bg-gray-50 px-6 py-4 text-center hover:text-blue-500"
+                                                    <th class="text-sm  font-normal text-gray-500 border-b bg-gray-50 px-6 py-4 text-center hover:text-blue-500"
                                                         mat-header-cell *matHeaderCellDef mat-sort-header
                                                         sortActionDescription="Sort by brand">
                                                         BRAND
@@ -225,14 +235,15 @@
 
                                                 <!-- Weight Column -->
                                                 <ng-container matColumnDef="weight">
-                                                    <th class="text-lg font-medium text-gray-500 border-b bg-gray-50 px-6 py-4 text-center hover:text-blue-500"
+                                                    <th class="text-sm  font-normal text-gray-500 border-b bg-gray-50 px-6 py-4 text-center hover:text-blue-500"
                                                         mat-header-cell *matHeaderCellDef mat-sort-header
                                                         sortActionDescription="Sort by weight">
                                                         PRODUCT UNIT
                                                     </th>
-                                                    <td class="text-sm bg-white text-black font-light  whitespace-nowrap"
-                                                        mat-cell *matCellDef="let element"> <span
-                                                            class="inline-block py-1.5 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-bold bg-pink-200  rounded">
+                                                    <td class="text-sm bg-white  font-light  whitespace-nowrap" mat-cell
+                                                        *matCellDef="let element"> <span
+                                                            [ngStyle]="{'background-color': element.weight==='kilogram'?'#ffedd5':(element.weight==='pack'?'#fde68a':(element.weight=='piece'?'#bbf7d0':(element.weight=='box'?'#fce7f3':'')))   , 'color':element.weight==='kilogram'?'#f87171':( element.weight==='piece'?'#22c55e': (element.weight==='pack'?'#b45309':( element.weight==='box'?'#ef4444':''))) }"
+                                                            class="inline-block py-1 px-2 leading-none text-center whitespace-nowrap align-baseline font-normal    rounded">
                                                             {{element.weight}} </span></td>
                                                 </ng-container>
 
@@ -258,7 +269,7 @@
                                                             {{element.paid}}</span> </td>
                                                 </ng-container> -->
                                                 <ng-container matColumnDef="type">
-                                                    <th class="text-lg font-medium text-gray-500 border-b bg-gray-50 px-6 py-4 text-center hover:text-blue-500"
+                                                    <th class="text-sm  font-normal text-gray-500 border-b bg-gray-50 px-6 py-4 text-center hover:text-blue-500"
                                                         mat-header-cell *matHeaderCellDef mat-sort-header
                                                         sortActionDescription="Sort by type">
                                                         IN-STOCK
@@ -269,7 +280,7 @@
                                                             {{element.type}}</span> </td>
                                                 </ng-container>
                                                 <ng-container matColumnDef="paid">
-                                                    <th class="text-lg font-medium text-gray-500 border-b bg-gray-50 px-6 py-4 text-center hover:text-blue-500"
+                                                    <th class="text-sm  font-normal text-gray-500 border-b bg-gray-50 px-6 py-4 text-center hover:text-blue-500"
                                                         mat-header-cell *matHeaderCellDef mat-sort-header
                                                         sortActionDescription="Sort by paid">
                                                         PRICE
@@ -280,18 +291,18 @@
 
 
                                                 <ng-container matColumnDef="createdon">
-                                                    <th class="text-lg font-medium text-gray-500 border-b bg-gray-50 px-6 py-4 text-center hover:text-blue-500"
+                                                    <th class="text-sm  font-normal text-gray-500 border-b bg-gray-50 px-6 py-4 text-center hover:text-blue-500"
                                                         mat-header-cell *matHeaderCellDef mat-sort-header
                                                         sortActionDescription="Sort by createdon">
                                                         CREATED ON
                                                     </th>
-                                                    <td class="text-sm bg-white text-pink-500 font-light     whitespace-nowrap"
+                                                    <td class="text-sm bg-white text-cyan-400 font-light     whitespace-nowrap"
                                                         mat-cell *matCellDef="let element"><span
-                                                            class="inline-block py-1.5 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-bold bg-green-200  rounded">
+                                                            class="inline-block py-1.5 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-normal bg-teal-100  rounded">
                                                             {{element.createdon}} </span> </td>
                                                 </ng-container>
                                                 <ng-container matColumnDef="action">
-                                                    <th class="text-lg font-medium text-gray-500 border-b bg-gray-50 px-6 py-4 text-center hover:text-blue-500"
+                                                    <th class="text-sm  font-normal text-gray-500 border-b bg-gray-50 px-6 py-4 text-center hover:text-blue-500"
                                                         mat-header-cell *matHeaderCellDef mat-sort-header
                                                         sortActionDescription="Sort by action">
                                                         ACTION
