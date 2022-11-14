@@ -30,9 +30,10 @@ export class ProductCategoriesComponent implements OnInit {
   isNavMinimized = false;
   ShowModal = false;
   ShowCategoryModal = false;
-    displayedColumns: string[] = ['code', 'name', 'action'];
-    dataSource = new MatTableDataSource(ELEMENT_DATA);
-
+  EditCategory = false;
+  displayedColumns: string[] = ['code', 'name', 'action'];
+  dataSource = new MatTableDataSource(ELEMENT_DATA);
+  file: any; // Variable to store file
 
   constructor(public commonService: CommonService, private _liveAnnouncer: LiveAnnouncer,) { }
 
@@ -48,7 +49,11 @@ export class ProductCategoriesComponent implements OnInit {
   ngAfterViewInit() {
     this.dataSource.sort = this.sort;
   }
+  onChange(event: any) {
+    debugger
+    this.file = event.target.files[0];
 
+  }
   /** Announce the change in sort state for assistive technology. */
   announceSortChange(sortState: Sort) {
     // This example uses English messages. If your application supports
@@ -67,8 +72,13 @@ export class ProductCategoriesComponent implements OnInit {
   OnCancel() {
     this.ShowModal = false;
     this.ShowCategoryModal = false;
+    this.EditCategory = false;
   }
   OncreateCategory() {
     this.ShowCategoryModal = true;
   }
+  OnEditCategory() {
+    this.EditCategory = true;
+  }
+
 }
