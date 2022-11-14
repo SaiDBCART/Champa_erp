@@ -9,6 +9,21 @@ import { CommonService } from 'src/app/components/commonservice';
 export class ViewProductComponent implements OnInit {
   isNavMinimized = false;
 
+  // barcode generator starts
+  // title = 'generatebc';
+  // name = 'Angular 6';
+
+  PrintSerials = [{
+    SerialId: 12345,
+    Name: 'A',
+    barCode: '12345A'
+  },
+  {
+    SerialId: 585885,
+    Name: 'A',
+    barCode: '585885A'
+  }];
+  // barcode ends here
   constructor(public commonService: CommonService) { }
 
   ngOnInit(): void {

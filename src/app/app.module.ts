@@ -6,6 +6,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
+// import { NgxBarcodeScannerModule } from '@eisberg-labs/ngx-barcode-scanner';
+import { NgxBarcodeModule } from 'ngx-barcode';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -45,7 +47,7 @@ import { ViewProductComponent } from './components/pages/dashboard/products/view
 
   ],
   imports: [
-    BrowserModule, BrowserAnimationsModule,
+    BrowserModule, BrowserAnimationsModule, NgxBarcodeModule,
     AppRoutingModule, NgSelectModule, FormsModule, MatPaginatorModule, MatSortModule, MatTableModule
   ],
   providers: [],
