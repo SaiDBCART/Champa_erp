@@ -11,8 +11,9 @@ import { Counter1Component } from './components/pages/counters/counter1/counter1
 import { ProductsComponent } from './components/pages/dashboard/products/products.component';
 import { CreateproductComponent } from './components/pages/dashboard/products/createproduct/createproduct.component';
 import { EditproductComponent } from './components/pages/dashboard/products/editproduct/editproduct.component';
-import { PosComponent } from './components/pages/dashboard/pos/pos.component';
 import { ViewProductComponent } from './components/pages/dashboard/products/view-product/view-product.component';
+import { ProductCategoriesComponent } from './components/pages/dashboard/products/product-categories/product-categories.component';
+import { PosComponent } from './components/pages/dashboard/pos/pos.component';
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: "login", component: LoginComponent },
@@ -27,6 +28,7 @@ const routes: Routes = [
   { path: "createproduct", component: CreateproductComponent },
   { path: "editproduct", component: EditproductComponent },
   { path: "viewproduct", component: ViewProductComponent },
+  { path: "ProductCategories", component: ProductCategoriesComponent },
   { path: "dashboard/pos", component: PosComponent }
 ];
 

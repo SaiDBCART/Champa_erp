@@ -24,6 +24,7 @@ import { ProductsComponent } from './components/pages/dashboard/products/product
 import { CreateproductComponent } from './components/pages/dashboard/products/createproduct/createproduct.component';
 import { EditproductComponent } from './components/pages/dashboard/products/editproduct/editproduct.component';
 import { ViewProductComponent } from './components/pages/dashboard/products/view-product/view-product.component';
+import { ProductCategoriesComponent } from './components/pages/dashboard/products/product-categories/product-categories.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +42,8 @@ import { ViewProductComponent } from './components/pages/dashboard/products/view
     ProductsComponent,
     CreateproductComponent,
     EditproductComponent,
-    ViewProductComponent
+    ViewProductComponent,
+    ProductCategoriesComponent
 
   ],
   imports: [
