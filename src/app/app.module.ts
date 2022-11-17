@@ -1,14 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgSelectModule } from '@ng-select/ng-select';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
 // import { NgxBarcodeScannerModule } from '@eisberg-labs/ngx-barcode-scanner';
 import { NgxBarcodeModule } from 'ngx-barcode';
-import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -51,7 +50,7 @@ import { ProductCategoriesComponent } from './components/pages/dashboard/product
   ],
   imports: [
     BrowserModule, BrowserAnimationsModule, NgxBarcodeModule,
-    AppRoutingModule, NgSelectModule, FormsModule, MatPaginatorModule, MatSortModule, MatTableModule, Ng2SearchPipeModule
+    AppRoutingModule, NgSelectModule, FormsModule, ReactiveFormsModule, MatPaginatorModule, MatSortModule, MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
