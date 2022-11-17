@@ -7,18 +7,21 @@
             </div>
         </div>
         <div id="login-section">
-            <form id="login-form" class="bg-white shadow-lg rounded-2xl px-8 pt-8 pb-8 mb-4">
+            <form [formGroup]='loginform'(ngSubmit)="onFormSubmit()" class="bg-white shadow-lg rounded-2xl px-8 pt-8 pb-8 mb-4">
                 <div class="grid place-items-center">
                     <span class="text-xl pb-8 font-semibold">Sign In</span>
                 </div>
+                <div class="form-group">
                 <div class="mb-4">
                     <label class="block text-gray-700 text-sm mb-2" for="username">
-                        E-mail:<span class="text-red-500">*</span>
+                        username:<span class="text-red-500">*</span>
                     </label>
                     <input
                         class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                        id="username" type="text" placeholder="Username">
+                        id="username"  formControlName="username" type="text" placeholder="Username">
                 </div>
+            </div>
+            <div class="form-group">
                 <div class="mb-6">
                     <div class="grid grid-cols-2 gap-2">
                         <div>
@@ -34,22 +37,34 @@
                         </div>
 
                     </div>
+                
                     <input
-                        class="hadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                        id="password" type="password" placeholder="********">
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        id="password" type="password"  formControlName="password" placeholder="********">
                 </div>
+            </div>
                 <div class="flex items-center justify-between">
                     <button
                         class="bg-indigo-500 hover:bg-indigo-700 text-white py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full"
-                        type="button" [routerLink]="['/dashboard']">
+                        type="submit">
                         Log In
+                      
                     </button>
                 </div>
+                    <div *ngIf= "isSubmitted">
+                        
+                        <span *ngIf="invalid" style="color:red;font-size:initial;"><b>{{errmsg}}</b><br>
+                        </span>
+                        <div *ngIf="!invalid" class="alert alert-success" style="color:green;font-size:initial">
+                            
+                            <b>{{errmsg}}</b>
+                        </div>
+                    </div>
                 <br>
                 <div class="grid grid-cols-3 gap-3 flex items-center justify-between pb-4">
                     <div>
                         <button
-                            class="bg-green-500 hover:bg-green-700 text-white py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full"
+                            class="bg-green-500 hover:bg-green-700 text-white py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full" 
                             type="button">
                             Admin
                         </button>
