@@ -22,7 +22,7 @@
 
     </div>
     <div [ngClass]="{ 'hidden md:block': !this.isNavMinimized }"
-        class="transition ease-in-out duration-150 divide-y divide-gray-700 overflow-y-auto vertical-nav">
+        class="transition ease-in-out duration-150 divide-y divide-gray-700 overflow-y-auto vertical-nav overflow-x-hidden">
         <div class="">
             <form *ngIf="!this.isNavMinimized" class="flex items-center p-4">
                 <label for="simple-search" class="sr-only">Search</label>
@@ -36,39 +36,34 @@
                             </path>
                         </svg>
                     </div>
-                    <input type="text" id="simple-search"
+                    <input type="text" id="simple-search" name="search" [(ngModel)]="searchText"
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 "
                         placeholder="Search" required="">
                 </div>
             </form>
             <div>
                 <ul class="space-y-2 pb-8">
-                    <li class="bg-indigo-100  border-l-4 border-indigo-700">
-                        <a href="/dashboard"
-                            class="flex items-center p-2 text-sm font-normal text-gray-500 rounded-lg mr-4 ml-4 ">
-                            <svg aria-hidden="true"
+                    <li class="hover:bg-indigo-100  border-indigo-700" *ngFor="let data of menudata|filter:searchText">
+                        <a *ngIf="data.submenu.length == 0" routerLink="/dashboard"
+                            class="flex items-center p-2 text-sm font-normal text-gray-500 rounded-lg mx-4">
+                            <!-- <svg aria-hidden="true"
                                 class="w-5 h-5 text-gray-500 transition ease-in-out duration-150  group-hover:text-gray-500 "
                                 fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path>
                                 <path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path>
-                            </svg>
-                            <span *ngIf="!this.isNavMinimized" class="ml-3">
-                                Dashboard
+                            </svg>   -->
+                            <!-- {{data.Icon}} -->
+                            <i [class]="data.Icon"></i>
+                            <span class="ml-2">
+                                {{data.Menu}}
                             </span>
                         </a>
-                    </li>
-                    <li class="hover:bg-indigo-100  hover:border-l-4 hover:border-indigo-700 ">
-                        <button type="button" (click)="OnShowDropdown()"
-                            class="flex items-center w-full p-2 text-base font-normal text-gray-500 transition duration-150 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                        <button *ngIf="data.submenu.length>0" type="button" (click)="OnShowDropdown(data.Id)"
+                            class="flex items-center w-full p-2 mx-4 text-base font-normal text-gray-500 transition duration-150 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
                             aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-                            <svg class="flex-shrink-0 w-6 h-6 ml-4 text-gray-500 transition duration-150 group-hover:text-gray-500 dark:text-gray-400 dark:group-hover:text-white"
-                                fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd"
-                                    d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z"
-                                    clip-rule="evenodd"></path>
-                            </svg>
+                            <i [class]="data.Icon"></i>
                             <span class="flex-1 ml-2 text-sm text-left whitespace-nowrap"
-                                sidebar-toggle-item>Product</span>
+                                sidebar-toggle-item>{{data.Menu}}</span>
                             <svg sidebar-toggle-item class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd"
@@ -76,37 +71,23 @@
                                     clip-rule="evenodd"></path>
                             </svg>
                         </button>
-                        <ul *ngIf="ShowDropdown==true" class=" py-2 space-y-2">
-                            <li>
-                                <a href="/dashboard/product"
-                                    class="flex items-center w-full p-2 text-sm font-normal text-gray-500 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 pl-11"><i
-                                        class="fa fa-arrow-right"></i><span class="pl-2">Product
-                                    </span></a>
+                        <ul id="dropdown-example" *ngIf="data.submenu.length>0 && data.Id == current_dropdown"
+                            class=" py-2 space-y-2">
+                            <li *ngFor="let submenudata of data.submenu|filter:searchText">
+                                <div [routerLink]="submenudata.Routing"
+                                    class="flex items-center w-full p-2 text-base font-normal text-gray-500 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 pl-11">
+                                    <i [class]="submenudata.Icon"></i><span class="pl-2">{{submenudata.SubMenu}}
+                                    </span>
+                                </div>
                             </li>
-                            <li>
-                                <a href="/ProductCategories"
-                                    class="flex items-center w-full p-2 text-sm font-normal text-gray-500 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 pl-11"><i
-                                        class="fa fa-arrow-right"></i><span class="pl-2">Product
-                                        Categories</span></a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="flex items-center w-full p-2 text-sm font-normal text-gray-500 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 pl-11">
-                                    <i class="fa fa-arrow-right"></i><span class="pl-2">Brands</span></a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="flex items-center w-full p-2 text-sm font-normal text-gray-500 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 pl-11"><i
-                                        class="fa fa-arrow-right"></i><span class="pl-2">Units</span></a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="flex items-center w-full p-2 text-sm font-normal text-gray-500 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 pl-11"><i
-                                        class="fa fa-arrow-right"></i><span class="pl-2">Print Barcode</span></a>
-                            </li>
+
                         </ul>
                     </li>
-                    <li class="hover:bg-indigo-100  hover:border-l-4 hover:border-indigo-700">
+                    <!-- <li class="hover:bg-indigo-100  hover:border-l-4 hover:border-indigo-700 " >
+                       
+                       
+                    </li> -->
+                    <!-- <li class="hover:bg-indigo-100  hover:border-l-4 hover:border-indigo-700">
                         <a href="/dashboard"
                             class="flex items-center p-2 text-sm font-normal text-gray-500 rounded-lg mr-4 ml-4 ">
                             <svg aria-hidden="true"
@@ -153,8 +134,8 @@
                                 Inbox
                             </span>
                         </a>
-                    </li>
-                    <li class="hover:bg-indigo-100  hover:border-l-4 hover:border-indigo-700">
+                    </li> -->
+                    <!-- <li class="hover:bg-indigo-100  hover:border-l-4 hover:border-indigo-700">
                         <a href="/dashboard"
                             class="flex items-center p-2 text-sm font-normal text-gray-500 rounded-lg mr-4 ml-4 ">
                             <svg aria-hidden="true"
@@ -182,6 +163,22 @@
                             </svg>
                             <span *ngIf="!this.isNavMinimized" class="flex-1 ml-3 whitespace-nowrap">
                                 Products
+                            </span>
+                        </a>
+                    </li>
+                    <li class="hover:bg-indigo-100  hover:border-l-4 hover:border-indigo-700">
+                        <a href="/warehouse"
+                            class="flex items-center p-2 text-sm font-normal text-gray-500 rounded-lg mr-4 ml-4 ">
+                            <svg aria-hidden="true"
+                                class="flex-shrink-0 w-5 h-5 text-gray-500 transition ease-in-out duration-150  group-hover:text-gray-500 "
+                                fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z"
+                                    clip-rule="evenodd">
+                                </path>
+                            </svg>
+                            <span *ngIf="!this.isNavMinimized" class="flex-1 ml-3 whitespace-nowrap">
+                                Warehouse
                             </span>
                         </a>
                     </li>
@@ -216,7 +213,7 @@
                                 Sign Up
                             </span>
                         </a>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </div>
