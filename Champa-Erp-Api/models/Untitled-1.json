@@ -1,0 +1,312 @@
+[
+    [
+        {
+            "Id": 1,
+            "Menu": "Dashboard",
+            "Active": null,
+            "CreatedBy": null,
+            "CreatedDate": null,
+            "UpdatedBy": null,
+            "UpdatedDate": null
+        },
+        {
+            "Id": 2,
+            "Menu": "product",
+            "Active": null,
+            "CreatedBy": null,
+            "CreatedDate": null,
+            "UpdatedBy": null,
+            "UpdatedDate": null
+        },
+        {
+            "Id": 3,
+            "Menu": "Adjustments",
+            "Active": null,
+            "CreatedBy": null,
+            "CreatedDate": null,
+            "UpdatedBy": null,
+            "UpdatedDate": null
+        },
+        {
+            "Id": 4,
+            "Menu": "Quotations",
+            "Active": null,
+            "CreatedBy": null,
+            "CreatedDate": null,
+            "UpdatedBy": null,
+            "UpdatedDate": null
+        },
+        {
+            "Id": 5,
+            "Menu": "Purchases",
+            "Active": null,
+            "CreatedBy": null,
+            "CreatedDate": null,
+            "UpdatedBy": null,
+            "UpdatedDate": null
+        },
+        {
+            "Id": 6,
+            "Menu": "Sales",
+            "Active": null,
+            "CreatedBy": null,
+            "CreatedDate": null,
+            "UpdatedBy": null,
+            "UpdatedDate": null
+        },
+        {
+            "Id": 7,
+            "Menu": "Transfers",
+            "Active": null,
+            "CreatedBy": null,
+            "CreatedDate": null,
+            "UpdatedBy": null,
+            "UpdatedDate": null
+        },
+        {
+            "Id": 8,
+            "Menu": "Expenses",
+            "Active": null,
+            "CreatedBy": null,
+            "CreatedDate": null,
+            "UpdatedBy": null,
+            "UpdatedDate": null
+        },
+        {
+            "Id": 9,
+            "Menu": "Peoples",
+            "Active": null,
+            "CreatedBy": null,
+            "CreatedDate": null,
+            "UpdatedBy": null,
+            "UpdatedDate": null
+        },
+        {
+            "Id": 10,
+            "Menu": "Roles/Permissions",
+            "Active": null,
+            "CreatedBy": null,
+            "CreatedDate": null,
+            "UpdatedBy": null,
+            "UpdatedDate": null
+        },
+        {
+            "Id": 11,
+            "Menu": "Warehouse",
+            "Active": null,
+            "CreatedBy": null,
+            "CreatedDate": null,
+            "UpdatedBy": null,
+            "UpdatedDate": null
+        },
+        {
+            "Id": 12,
+            "Menu": "Reports",
+            "Active": null,
+            "CreatedBy": null,
+            "CreatedDate": null,
+            "UpdatedBy": null,
+            "UpdatedDate": null
+        },
+        {
+            "Id": 13,
+            "Menu": "Currencies",
+            "Active": null,
+            "CreatedBy": null,
+            "CreatedDate": null,
+            "UpdatedBy": null,
+            "UpdatedDate": null
+        },
+        {
+            "Id": 14,
+            "Menu": "Templates",
+            "Active": null,
+            "CreatedBy": null,
+            "CreatedDate": null,
+            "UpdatedBy": null,
+            "UpdatedDate": null
+        },
+        {
+            "Id": 15,
+            "Menu": "Settings",
+            "Active": null,
+            "CreatedBy": null,
+            "CreatedDate": null,
+            "UpdatedBy": null,
+            "UpdatedDate": null
+        }
+    ],
+    [
+        {
+            "Id": 1,
+            "MenuId": 2,
+            "SubMenu": "product",
+            "Active": null,
+            "CreatedBy": null,
+            "CreatedDate": null,
+            "UpdatedBy": null,
+            "UpdatedDate": null
+        },
+        {
+            "Id": 2,
+            "MenuId": 2,
+            "SubMenu": "Product Categories",
+            "Active": null,
+            "CreatedBy": null,
+            "CreatedDate": null,
+            "UpdatedBy": null,
+            "UpdatedDate": null
+        },
+        {
+            "Id": 3,
+            "MenuId": 2,
+            "SubMenu": "Product Brand",
+            "Active": null,
+            "CreatedBy": null,
+            "CreatedDate": null,
+            "UpdatedBy": null,
+            "UpdatedDate": null
+        },
+        {
+            "Id": 4,
+            "MenuId": 2,
+            "SubMenu": "Product Units",
+            "Active": null,
+            "CreatedBy": null,
+            "CreatedDate": null,
+            "UpdatedBy": null,
+            "UpdatedDate": null
+        },
+        {
+            "Id": 5,
+            "MenuId": 2,
+            "SubMenu": "Product Barcode",
+            "Active": null,
+            "CreatedBy": null,
+            "CreatedDate": null,
+            "UpdatedBy": null,
+            "UpdatedDate": null
+        },
+        {
+            "Id": 6,
+            "MenuId": 5,
+            "SubMenu": "Purchases",
+            "Active": null,
+            "CreatedBy": null,
+            "CreatedDate": null,
+            "UpdatedBy": null,
+            "UpdatedDate": null
+        },
+        {
+            "Id": 7,
+            "MenuId": 5,
+            "SubMenu": "Purchases Return",
+            "Active": null,
+            "CreatedBy": null,
+            "CreatedDate": null,
+            "UpdatedBy": null,
+            "UpdatedDate": null
+        },
+        {
+            "Id": 8,
+            "MenuId": 6,
+            "SubMenu": "Sales",
+            "Active": null,
+            "CreatedBy": null,
+            "CreatedDate": null,
+            "UpdatedBy": null,
+            "UpdatedDate": null
+        },
+        {
+            "Id": 9,
+            "MenuId": 6,
+            "SubMenu": "Sales Return",
+            "Active": null,
+            "CreatedBy": null,
+            "CreatedDate": null,
+            "UpdatedBy": null,
+            "UpdatedDate": null
+        },
+        {
+            "Id": 10,
+            "MenuId": 8,
+            "SubMenu": "Expenses",
+            "Active": null,
+            "CreatedBy": null,
+            "CreatedDate": null,
+            "UpdatedBy": null,
+            "UpdatedDate": null
+        },
+        {
+            "Id": 11,
+            "MenuId": 8,
+            "SubMenu": "Expense Categories",
+            "Active": null,
+            "CreatedBy": null,
+            "CreatedDate": null,
+            "UpdatedBy": null,
+            "UpdatedDate": null
+        },
+        {
+            "Id": 12,
+            "MenuId": 9,
+            "SubMenu": "Suppliers",
+            "Active": null,
+            "CreatedBy": null,
+            "CreatedDate": null,
+            "UpdatedBy": null,
+            "UpdatedDate": null
+        },
+        {
+            "Id": 13,
+            "MenuId": 9,
+            "SubMenu": "Customers",
+            "Active": null,
+            "CreatedBy": null,
+            "CreatedDate": null,
+            "UpdatedBy": null,
+            "UpdatedDate": null
+        },
+        {
+            "Id": 14,
+            "MenuId": 9,
+            "SubMenu": "Users",
+            "Active": null,
+            "CreatedBy": null,
+            "CreatedDate": null,
+            "UpdatedBy": null,
+            "UpdatedDate": null
+        },
+        {
+            "Id": 15,
+            "MenuId": 14,
+            "SubMenu": "Email Templates",
+            "Active": null,
+            "CreatedBy": null,
+            "CreatedDate": null,
+            "UpdatedBy": null,
+            "UpdatedDate": null
+        },
+        {
+            "Id": 16,
+            "MenuId": 14,
+            "SubMenu": "Sms Template",
+            "Active": null,
+            "CreatedBy": null,
+            "CreatedDate": null,
+            "UpdatedBy": null,
+            "UpdatedDate": null
+        },
+        {
+            "Id": 17,
+            "MenuId": 14,
+            "SubMenu": "Sms Api",
+            "Active": null,
+            "CreatedBy": null,
+            "CreatedDate": null,
+            "UpdatedBy": null,
+            "UpdatedDate": null
+        }
+    ]
+]
+}
