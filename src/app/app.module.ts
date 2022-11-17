@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgSelectModule } from '@ng-select/ng-select';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
@@ -50,7 +50,7 @@ import { ProductCategoriesComponent } from './components/pages/dashboard/product
   ],
   imports: [
     BrowserModule, BrowserAnimationsModule, NgxBarcodeModule,
-    AppRoutingModule, NgSelectModule, FormsModule, MatPaginatorModule, MatSortModule, MatTableModule
+    AppRoutingModule, NgSelectModule, FormsModule, ReactiveFormsModule, MatPaginatorModule, MatSortModule, MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
