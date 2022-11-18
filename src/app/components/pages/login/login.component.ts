@@ -9,13 +9,13 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  //  public loginform: FormGroup;
+  public loginform: FormGroup;
   invalid = false;
   errmsg: String = '';
   isSubmitted = false;
 
 
-  constructor(private router: Router, private login: loginservice, public loginform: FormGroup) {
+  constructor(private router: Router, private login: loginservice) {
 
 
 
