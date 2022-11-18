@@ -9,9 +9,10 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
+
   public loginform: FormGroup;
   invalid = false;
-  errmsg: String = '';
+  errmsg: String;
   isSubmitted = false;
 
 
