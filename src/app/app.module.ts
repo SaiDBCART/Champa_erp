@@ -29,6 +29,7 @@ import { CreateproductComponent } from './components/pages/dashboard/products/cr
 import { EditproductComponent } from './components/pages/dashboard/products/editproduct/editproduct.component';
 import { ViewProductComponent } from './components/pages/dashboard/products/view-product/view-product.component';
 import { ProductCategoriesComponent } from './components/pages/dashboard/products/product-categories/product-categories.component';
+import { ProductBrandsComponent } from './components/pages/dashboard/products/product-brands/product-brands.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,13 +48,14 @@ import { ProductCategoriesComponent } from './components/pages/dashboard/product
     CreateproductComponent,
     EditproductComponent,
     ViewProductComponent,
-    ProductCategoriesComponent
+    ProductCategoriesComponent,
+    ProductBrandsComponent
 
   ],
   imports: [
 
     BrowserModule, BrowserAnimationsModule, HttpClientModule, NgxBarcodeModule,
-    AppRoutingModule, NgSelectModule, FormsModule, ReactiveFormsModule, MatPaginatorModule, MatSortModule, MatTableModule, Ng2SearchPipeModule
+    AppRoutingModule, NgSelectModule, FormsModule, ReactiveFormsModule, MatPaginatorModule, MatSortModule, MatTableModule, Ng2SearchPipeModule,
 
   ],
   providers: [],

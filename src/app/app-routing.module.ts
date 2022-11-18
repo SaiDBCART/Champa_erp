@@ -13,6 +13,7 @@ import { CreateproductComponent } from './components/pages/dashboard/products/cr
 import { EditproductComponent } from './components/pages/dashboard/products/editproduct/editproduct.component';
 import { ViewProductComponent } from './components/pages/dashboard/products/view-product/view-product.component';
 import { ProductCategoriesComponent } from './components/pages/dashboard/products/product-categories/product-categories.component';
+import { ProductBrandsComponent } from './components/pages/dashboard/products/product-brands/product-brands.component';
 import { PosComponent } from './components/pages/dashboard/pos/pos.component';
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -29,6 +30,7 @@ const routes: Routes = [
   { path: "editproduct", component: EditproductComponent },
   { path: "viewproduct", component: ViewProductComponent },
   { path: "ProductCategories", component: ProductCategoriesComponent },
+  { path: "Brand", component: ProductBrandsComponent },
   { path: "dashboard/pos", component: PosComponent }
 ];
 
