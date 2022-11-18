@@ -3,10 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule, HttpClient } from "@angular/common/http";
 import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
-// import { NgxBarcodeScannerModule } from '@eisberg-labs/ngx-barcode-scanner';
+
 import { NgxBarcodeModule } from 'ngx-barcode';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
@@ -50,8 +51,10 @@ import { ProductCategoriesComponent } from './components/pages/dashboard/product
 
   ],
   imports: [
-    BrowserModule, BrowserAnimationsModule, NgxBarcodeModule,
+
+    BrowserModule, BrowserAnimationsModule, HttpClientModule, NgxBarcodeModule,
     AppRoutingModule, NgSelectModule, FormsModule, ReactiveFormsModule, MatPaginatorModule, MatSortModule, MatTableModule, Ng2SearchPipeModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
