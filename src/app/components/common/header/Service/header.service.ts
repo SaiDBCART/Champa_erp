@@ -10,7 +10,7 @@ import { Menussubmenu } from '../Model/header.model';
 })
 
 export class Headerservice {
-    Menudata = "http://localhost:4000/menus"
+    Menudata = "http://192.168.1.34:4000/menus"
 
 
     constructor(private http: HttpClient) { }
