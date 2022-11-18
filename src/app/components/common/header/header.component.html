@@ -22,7 +22,7 @@
 
     </div>
     <div [ngClass]="{ 'hidden md:block': !this.isNavMinimized }"
-        class="transition ease-in-out duration-150 divide-y divide-gray-700 overflow-y-auto vertical-nav overflow-x-hidden">
+        class="transition ease-in-out duration-150 divide-y divide-gray-700 overflow-y-auto vertical-nav">
         <div class="">
             <form *ngIf="!this.isNavMinimized" class="flex items-center p-4">
                 <label for="simple-search" class="sr-only">Search</label>
@@ -77,8 +77,7 @@
                                 <div [routerLink]="submenudata.Routing"
                                     class="flex items-center w-full p-2 text-base font-normal text-gray-500 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 pl-11">
                                     <i [class]="submenudata.Icon"></i><span class="pl-2">{{submenudata.SubMenu}}
-                                    </span>
-                                </div>
+                                    </span></div>
                             </li>
 
                         </ul>

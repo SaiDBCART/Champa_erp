@@ -21,7 +21,7 @@ export class HeaderComponent implements OnInit {
       this.menudata = result.data;
       for (var i = 0, len = this.menudata.length; i < len; i++) {
         this.menudata[i].submenu = [];
-        // console.log(this.menudata[i].Id=this.menudata.submenu[i].MenuId);
+        console.log(this.menudata[i].Id = this.menudata.submenu[i].MenuId);
 
         for (var j = 0; j < submenu.length; j++) {
           if (this.menudata.submenu[j].MenuId == this.menudata[i].Id) {
