@@ -30,6 +30,7 @@ import { EditproductComponent } from './components/pages/dashboard/products/edit
 import { ViewProductComponent } from './components/pages/dashboard/products/view-product/view-product.component';
 import { ProductCategoriesComponent } from './components/pages/dashboard/products/product-categories/product-categories.component';
 import { ProductBrandsComponent } from './components/pages/dashboard/products/product-brands/product-brands.component';
+import { ProductUnitsComponent } from './components/pages/dashboard/products/product-units/product-units.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,7 +50,8 @@ import { ProductBrandsComponent } from './components/pages/dashboard/products/pr
     EditproductComponent,
     ViewProductComponent,
     ProductCategoriesComponent,
-    ProductBrandsComponent
+    ProductBrandsComponent,
+    ProductUnitsComponent
 
   ],
   imports: [
