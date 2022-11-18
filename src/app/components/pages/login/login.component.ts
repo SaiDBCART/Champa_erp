@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { loginservice } from './Service/login.service';
-import{Router}from '@angular/router'
+import { Router } from '@angular/router'
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -9,17 +9,21 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-   public loginform: FormGroup;
-   invalid=false;
-  errmsg:String;
+
+  public loginform: FormGroup;
+  invalid = false;
+  errmsg: String;
   isSubmitted = false;
-   
-
-  constructor(private  router: Router,private login:loginservice) {
 
 
+  constructor(private router: Router, private login: loginservice) {
 
-   }
+
+
+  }
+
+
+
 
   ngOnInit(): void {
     this.loginform = new FormGroup({
@@ -28,32 +32,32 @@ export class LoginComponent implements OnInit {
         Validators.required,
         Validators.minLength(8)
       ]),
-      
+
     })
   }
   get f() {
     return this.loginform.controls;
   }
-  onFormSubmit(){
-   
+  onFormSubmit() {
+
     console.log(this.loginform.value)
 
-    this.login.getlogin(this.loginform.value).subscribe((result)=>{
+    this.login.getlogin(this.loginform.value).subscribe((result) => {
       console.log(result);
-      this.isSubmitted= true;
+      this.isSubmitted = true;
       if (result.flag === 1) {
         this.invalid = false;
         this.errmsg = String(result.message);
         console.log(this.errmsg);
-        
+
       } else {
         this.invalid = true;
-       
+
         this.errmsg = String(result.message);
         console.log(this.errmsg)
       }
-     this.router.navigate(['/dashboard']);
-      
+      this.router.navigate(['/dashboard']);
+
     });
   }
 }
