@@ -4,6 +4,9 @@ import { LiveAnnouncer } from '@angular/cdk/a11y';
 import { MatSort, Sort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 
+
+import { MatPaginator } from '@angular/material/paginator';
+
 export interface PeriodicElement {
   name: string;
   category: string;
@@ -28,8 +31,10 @@ export class ProductBrandsComponent implements OnInit {
   isNavMinimized = false;
   ShowModal = false;
   ShowCategoryModal = false;
+  Showeditbrand= false;
   displayedColumns: string[] = ['code', 'name', 'action'];
   dataSource = new MatTableDataSource(ELEMENT_DATA);
+  dataSourceWithPageSize: any;
 
   constructor(public commonService: CommonService, private _liveAnnouncer: LiveAnnouncer,) { }
 
@@ -41,9 +46,15 @@ export class ProductBrandsComponent implements OnInit {
         console.log('Event message from Component A: ' + data);
       });
   }
+  @ViewChild('paginator') paginator: MatPaginator | any;
+  @ViewChild('paginatorPageSize') paginatorPageSize: MatPaginator | any;
   @ViewChild(MatSort) sort: MatSort | any;
+
+  pageSizes = [3, 5, 7];
   ngAfterViewInit() {
     this.dataSource.sort = this.sort;
+    this.dataSource.paginator = this.paginator;
+    this.dataSourceWithPageSize.paginator = this.paginatorPageSize;
   }
 
   /** Announce the change in sort state for assistive technology. */
@@ -64,8 +75,23 @@ export class ProductBrandsComponent implements OnInit {
   OnCancel() {
     this.ShowModal = false;
     this.ShowCategoryModal = false;
+    this.Showeditbrand =false;
   }
   OncreateBrand() {
     this.ShowCategoryModal = true;
+  }
+  editbrand(){
+    this.Showeditbrand =true;
+  }
+
+  removeAt(index: number) {
+    const data = this.dataSource.data;
+    data.splice((this.paginator.pageIndex * this.paginator.pageSize) + index, 1);
+
+    this.dataSource.data = data;
+  }
+   applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 }
