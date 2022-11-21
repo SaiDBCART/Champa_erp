@@ -31,6 +31,10 @@ import { ViewProductComponent } from './components/pages/dashboard/products/view
 import { ProductCategoriesComponent } from './components/pages/dashboard/products/product-categories/product-categories.component';
 import { ProductBrandsComponent } from './components/pages/dashboard/products/product-brands/product-brands.component';
 import { ProductUnitsComponent } from './components/pages/dashboard/products/product-units/product-units.component';
+import { WarehouseComponent } from './components/pages/warehouse/warehouse.component';
+import { CreatewarehouseComponent } from './components/pages/warehouse/createwarehouse/createwarehouse.component';
+import { ViewwarehouseComponent } from './components/pages/warehouse/viewwarehouse/viewwarehouse.component';
+import { EditwarehouseComponent } from './components/pages/warehouse/editwarehouse/editwarehouse.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,7 +55,11 @@ import { ProductUnitsComponent } from './components/pages/dashboard/products/pro
     ViewProductComponent,
     ProductCategoriesComponent,
     ProductBrandsComponent,
-    ProductUnitsComponent
+    ProductUnitsComponent,
+    WarehouseComponent,
+    CreatewarehouseComponent,
+    ViewwarehouseComponent,
+    EditwarehouseComponent
 
   ],
   imports: [

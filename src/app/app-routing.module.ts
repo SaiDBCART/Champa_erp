@@ -16,6 +16,10 @@ import { ProductCategoriesComponent } from './components/pages/dashboard/product
 import { ProductUnitsComponent } from './components/pages/dashboard/products/product-units/product-units.component';
 import { ProductBrandsComponent } from './components/pages/dashboard/products/product-brands/product-brands.component';
 import { PosComponent } from './components/pages/dashboard/pos/pos.component';
+import { WarehouseComponent } from './components/pages/warehouse/warehouse.component';
+import { CreatewarehouseComponent } from './components/pages/warehouse/createwarehouse/createwarehouse.component';
+import { ViewwarehouseComponent } from './components/pages/warehouse/viewwarehouse/viewwarehouse.component';
+import { EditwarehouseComponent } from './components/pages/warehouse/editwarehouse/editwarehouse.component';
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: "login", component: LoginComponent },
@@ -33,7 +37,12 @@ const routes: Routes = [
   { path: "ProductCategories", component: ProductCategoriesComponent },
   { path: "ProductUnit", component: ProductUnitsComponent },
   { path: "Brand", component: ProductBrandsComponent },
-  { path: "dashboard/pos", component: PosComponent }
+  { path: "dashboard/pos", component: PosComponent },
+  { path: "warehouse", component: WarehouseComponent },
+  { path: "createwarehouse", component: CreatewarehouseComponent },
+  { path: "viewwarehouse", component: ViewwarehouseComponent },
+  { path: "editwarehouse", component: EditwarehouseComponent }
+
 ];
 
 @NgModule({
