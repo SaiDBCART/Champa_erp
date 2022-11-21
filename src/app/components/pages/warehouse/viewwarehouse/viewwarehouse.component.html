@@ -1,0 +1,98 @@
+<app-header></app-header>
+<!-- create start -->
+<section [ngClass]="{ 'md:pl-20': this.isNavMinimized,  'md:pl-64': !this.isNavMinimized  }" class="pl-20   ">
+    <div class="grid grid-cols-1 gap-1 items-center">
+
+        <div class=" grid grid-cols-2 gap-4  items-center py-4   xl:pl-5">
+            <div><span class="text-black-500 text-3xl  font-weight-600 font-light    text-3xl   ">
+                    Warehouse Details
+                </span></div>
+            <div class="grid justify-items-end "> <button
+                    class="bg-transparent hover:bg-blue-500 justify-items-end text-blue-500  font-semibold outline-blue-500  hover:text-white border border-blue-500  hover:border-transparent rounded   rounded w-20 h-12 mr-9 float-right   "
+                    [routerLink]="['/warehouse']">
+                    <span>Back</span>
+                </button></div>
+        </div>
+
+    </div>
+    <div class="overflow-x-auto relative shadow-md sm:rounded-lg col-start-1 col-end-7 m-10 mt-3">
+
+        <!-- Mattable start -->
+        <div class="example-container mat-elevation-z8">
+
+            <table mat-table [dataSource]="dataSource" matSort (matSortChange)="announceSortChange($event)"
+                class="mat-elevation-z8 min-w-full">
+
+                <!-- Position Column -->
+                <ng-container matColumnDef="product"
+                    class=" border-b bg-gray-50 transition duration-300 ease-in-out hover:bg-gray-100">
+                    <th class="text-lg font-medium text-gray-500 border-b bg-gray-50 px-6 py-4  justify-center hover:text-blue-500 transition duration-300 ease-in-out hover:bg-gray-100"
+                        mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by product">
+                        Product
+                    </th>
+                    <td class="text-sm bg-white text-black font-light  whitespace-nowrap" mat-cell
+                        *matCellDef="let element">
+                        <div class="flex items-center space-x-4">
+                            <img class="w-10 h-10 rounded-full" [src]="element.img" alt="">
+                            <div class="font-medium text-gray-500">
+                                <div>{{element.name}}</div>
+
+                            </div>
+                        </div>
+                    </td>
+                </ng-container>
+                <ng-container matColumnDef="quantity"
+                    class="border-b bg-gray-50 transition duration-300 ease-in-out hover:bg-gray-100">
+                    <th class="text-lg font-medium text-gray-500 border-b bg-gray-50 px-6 py-4 text-center hover:text-blue-500 transition duration-300 ease-in-out hover:bg-gray-100"
+                        mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by quantity">
+                        Quantity
+                    </th>
+                    <td class="text-sm bg-white text-gray-500 font-light  whitespace-nowrap" mat-cell
+                        *matCellDef="let element">
+                        <span
+                            class="inline-block py-1 px-2 mr-2 leading-none text-center bg-green-100 text-teal-300 whitespace-nowrap align-baseline font-normal    rounded">
+                            {{element.category}} </span>
+                        <span
+                            [ngStyle]="{'background-color': element.unit==='piece'?'#ffedd5':(element.unit==='pack'?'#fde68a':(element.unit=='piece'?'#bbf7d0':(element.unit=='box'?'#fce7f3':'')))   , 'color':element.unit==='kilogram'?'#f87171':( element.unit==='piece'?'#f87171': (element.unit==='pack'?'#b45309':( element.unit==='box'?'#ef4444':''))) }"
+                            class="inline-block py-1 px-2 leading-none text-center whitespace-nowrap align-baseline font-normal    rounded">
+                            {{element.unit}}</span>
+                    </td>
+                </ng-container>
+
+
+                <!-- Symbol Column -->
+                <!-- <ng-container matColumnDef="symbol">
+                        <th class="text-lg font-medium text-gray-500 border-b bg-gray-50 px-6 py-4 text-center hover:text-blue-500"
+                            mat-header-cell *matHeaderCellDef mat-sort-header
+                            sortActionDescription="Sort by symbol">
+                            GRAND TOTAL
+                        </th>
+                        <td class="text-sm bg-white text-gray-500 font-light  whitespace-nowrap"
+                            mat-cell *matCellDef="let element"> {{element.total}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="grandtotal">
+                        <th class="text-lg font-medium text-gray-500 border-b bg-gray-50 px-6 py-4 text-center hover:text-blue-500"
+                            mat-header-cell *matHeaderCellDef mat-sort-header
+                            sortActionDescription="Sort by grandtotal">
+                            PAYMENT STATUS
+                        </th>
+                        <td class="text-sm bg-white text-gray-500 font-light  whitespace-nowrap"
+                            mat-cell *matCellDef="let element"> <span
+                                class="inline-block py-1.5 px-2.5 leading-none text-green-800  whitespace-nowrap align-baseline font-medium bg-green-200 text-white rounded">
+                                {{element.paid}}</span> </td>
+                    </ng-container> -->
+
+
+
+
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+
+            <!-- <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator> -->
+        </div>
+
+
+    </div>
+</section>
