@@ -5,6 +5,8 @@ import { LiveAnnouncer } from '@angular/cdk/a11y';
 import { MatSort, Sort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 
+import { MatPaginator } from '@angular/material/paginator';
+
 
 export interface PeriodicElement {
   name: string;
@@ -45,7 +47,9 @@ export class ProductsComponent implements OnInit {
   showpopup = false;
   displayedColumns: string[] = ['code', 'name', 'brand', 'weight', 'paid', 'type', 'createdon', 'action'];
   dataSource = new MatTableDataSource(ELEMENT_DATA);
-
+  dataSourceWithPageSize: any;
+ 
+ 
 
   constructor(public commonService: CommonService, private _liveAnnouncer: LiveAnnouncer, private router: Router) { }
 
@@ -64,9 +68,16 @@ export class ProductsComponent implements OnInit {
   OnproductEdit() {
     this.router.navigate(["/editproduct"])
   }
+ 
+ 
+  @ViewChild('paginator') paginator: MatPaginator | undefined;
+  @ViewChild('paginatorPageSize') paginatorPageSize: MatPaginator | undefined;
   @ViewChild(MatSort) sort: MatSort | any;
+  pageSizes = [3, 5, 7];
+
   ngAfterViewInit() {
     this.dataSource.sort = this.sort;
+    this.dataSourceWithPageSize.paginator = this.paginatorPageSize;
   }
 
   /** Announce the change in sort state for assistive technology. */
@@ -91,4 +102,8 @@ export class ProductsComponent implements OnInit {
   ShowModel() {
     this.ShowModal = true;
   }
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+  } 
 }
