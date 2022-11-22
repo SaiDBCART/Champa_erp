@@ -35,6 +35,10 @@ import { WarehouseComponent } from './components/pages/warehouse/warehouse.compo
 import { CreatewarehouseComponent } from './components/pages/warehouse/createwarehouse/createwarehouse.component';
 import { ViewwarehouseComponent } from './components/pages/warehouse/viewwarehouse/viewwarehouse.component';
 import { EditwarehouseComponent } from './components/pages/warehouse/editwarehouse/editwarehouse.component';
+import { ExpensesComponent } from './components/pages/expenses/expenses.component';
+import { ExpenseCategoriesComponent } from './components/pages/expenses/expense-categories/expense-categories.component';
+import { CreateExpensesComponent } from './components/pages/expenses/create-expenses/create-expenses.component';
+import { EditExpenseComponent } from './components/pages/expenses/edit-expense/edit-expense.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,7 +63,11 @@ import { EditwarehouseComponent } from './components/pages/warehouse/editwarehou
     WarehouseComponent,
     CreatewarehouseComponent,
     ViewwarehouseComponent,
-    EditwarehouseComponent
+    EditwarehouseComponent,
+    ExpensesComponent,
+    ExpenseCategoriesComponent,
+    CreateExpensesComponent,
+    EditExpenseComponent
 
   ],
   imports: [
