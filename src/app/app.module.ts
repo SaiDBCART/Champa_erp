@@ -39,6 +39,7 @@ import { ExpensesComponent } from './components/pages/expenses/expenses.componen
 import { ExpenseCategoriesComponent } from './components/pages/expenses/expense-categories/expense-categories.component';
 import { CreateExpensesComponent } from './components/pages/expenses/create-expenses/create-expenses.component';
 import { EditExpenseComponent } from './components/pages/expenses/edit-expense/edit-expense.component';
+import { CurrenciesComponent } from './components/pages/currencies/currencies.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -67,7 +68,8 @@ import { EditExpenseComponent } from './components/pages/expenses/edit-expense/e
     ExpensesComponent,
     ExpenseCategoriesComponent,
     CreateExpensesComponent,
-    EditExpenseComponent
+    EditExpenseComponent,
+    CurrenciesComponent
 
   ],
   imports: [
