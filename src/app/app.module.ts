@@ -10,6 +10,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 
 import { NgxBarcodeModule } from 'ngx-barcode';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { AutocompleteLibModule } from 'angular-ng-autocomplete';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -35,6 +36,8 @@ import { WarehouseComponent } from './components/pages/warehouse/warehouse.compo
 import { CreatewarehouseComponent } from './components/pages/warehouse/createwarehouse/createwarehouse.component';
 import { ViewwarehouseComponent } from './components/pages/warehouse/viewwarehouse/viewwarehouse.component';
 import { EditwarehouseComponent } from './components/pages/warehouse/editwarehouse/editwarehouse.component';
+import { CountersComponent } from './components/pages/counters/counters.component';
+import { AssignEmployeeComponent } from './components/pages/counters/assign-employee/assign-employee.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,14 +62,15 @@ import { EditwarehouseComponent } from './components/pages/warehouse/editwarehou
     WarehouseComponent,
     CreatewarehouseComponent,
     ViewwarehouseComponent,
-    EditwarehouseComponent
-
+    EditwarehouseComponent,
+    CountersComponent,
+    AssignEmployeeComponent
   ],
   imports: [
 
     BrowserModule, BrowserAnimationsModule, HttpClientModule, NgxBarcodeModule,
     AppRoutingModule, NgSelectModule, FormsModule, ReactiveFormsModule, MatPaginatorModule, MatSortModule, MatTableModule, Ng2SearchPipeModule,
-
+    AutocompleteLibModule
   ],
   providers: [],
   bootstrap: [AppComponent]

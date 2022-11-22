@@ -20,6 +20,7 @@
     "@angular/platform-browser-dynamic": "^14.2.0",
     "@angular/router": "^14.2.0",
     "@ng-select/ng-select": "^9.0.2",
+    "angular-ng-autocomplete": "^2.0.12",
     "flowbite-datepicker": "^1.2.2",
     "ng2-search-filter": "^0.5.1",
     "ngx-barcode": "^0.3.0",
