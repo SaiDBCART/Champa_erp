@@ -24,6 +24,7 @@ import { ExpensesComponent } from './components/pages/expenses/expenses.componen
 import { ExpenseCategoriesComponent } from './components/pages/expenses/expense-categories/expense-categories.component';
 import { CreateExpensesComponent } from './components/pages/expenses/create-expenses/create-expenses.component';
 import { EditExpenseComponent } from './components/pages/expenses/edit-expense/edit-expense.component';
+import { CurrenciesComponent } from './components/pages/currencies/currencies.component';
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: "login", component: LoginComponent },
@@ -49,7 +50,8 @@ const routes: Routes = [
   {path:"expenses", component :ExpensesComponent},
   {path:"expense-categories",component:ExpenseCategoriesComponent},
   {path:"create-expenses",component:CreateExpensesComponent},
-  {path:"edit-expense",component:EditExpenseComponent}
+  {path:"edit-expense",component:EditExpenseComponent},
+  {path:"currencies",component:CurrenciesComponent}
 
 ];
 
