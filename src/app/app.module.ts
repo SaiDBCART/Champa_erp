@@ -10,6 +10,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 
 import { NgxBarcodeModule } from 'ngx-barcode';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { AutocompleteLibModule } from 'angular-ng-autocomplete';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -39,6 +40,8 @@ import { ExpenseCategoriesComponent } from './components/pages/expenses/expense-
 import { CreateExpensesComponent } from './components/pages/expenses/create-expenses/create-expenses.component';
 import { EditExpenseComponent } from './components/pages/expenses/edit-expense/edit-expense.component';
 import { CurrenciesComponent } from './components/pages/currencies/currencies.component';
+import { CounterslistComponent } from './components/pages/counterslist/counterslist.component';
+import { AssignEmployeeComponent } from './components/pages/counterslist/assign-employee/assign-employee.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -67,13 +70,16 @@ import { CurrenciesComponent } from './components/pages/currencies/currencies.co
     ExpenseCategoriesComponent,
     CreateExpensesComponent,
     EditExpenseComponent,
-    CurrenciesComponent
+    CurrenciesComponent,
+    CounterslistComponent,
+    AssignEmployeeComponent
 
   ],
   imports: [
 
     BrowserModule, BrowserAnimationsModule, HttpClientModule, NgxBarcodeModule,
-    AppRoutingModule, NgSelectModule, FormsModule, ReactiveFormsModule, MatPaginatorModule, MatSortModule, MatTableModule, Ng2SearchPipeModule,
+    AppRoutingModule, NgSelectModule, FormsModule, ReactiveFormsModule, MatPaginatorModule,
+    MatSortModule, MatTableModule, Ng2SearchPipeModule, AutocompleteLibModule
 
   ],
   providers: [],
