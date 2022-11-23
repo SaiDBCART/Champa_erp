@@ -20,6 +20,8 @@ import { WarehouseComponent } from './components/pages/warehouse/warehouse.compo
 import { CreatewarehouseComponent } from './components/pages/warehouse/createwarehouse/createwarehouse.component';
 import { ViewwarehouseComponent } from './components/pages/warehouse/viewwarehouse/viewwarehouse.component';
 import { EditwarehouseComponent } from './components/pages/warehouse/editwarehouse/editwarehouse.component';
+import { CounterslistComponent } from './components/pages/counterslist/counterslist.component';
+import { AssignEmployeeComponent } from './components/pages/counterslist/assign-employee/assign-employee.component';
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: "login", component: LoginComponent },
@@ -41,7 +43,9 @@ const routes: Routes = [
   { path: "warehouse", component: WarehouseComponent },
   { path: "createwarehouse", component: CreatewarehouseComponent },
   { path: "viewwarehouse", component: ViewwarehouseComponent },
-  { path: "editwarehouse", component: EditwarehouseComponent }
+  { path: "editwarehouse", component: EditwarehouseComponent },
+  { path: "counters", component: CounterslistComponent },
+  { path: "AssigningEmployee", component: AssignEmployeeComponent }
 
 ];
 
