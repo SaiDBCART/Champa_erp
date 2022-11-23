@@ -10,7 +10,7 @@ import { EditsalesComponent } from './components/pages/dashboard/sales/editsales
 import { ProductsComponent } from './components/pages/dashboard/products/products.component';
 import { CreateproductComponent } from './components/pages/dashboard/products/createproduct/createproduct.component';
 import { EditproductComponent } from './components/pages/dashboard/products/editproduct/editproduct.component';
-import {  ViewProductComponent } from './components/pages/dashboard/products/view-product/view-product.component';
+import { ViewProductComponent } from './components/pages/dashboard/products/view-product/view-product.component';
 import { ProductCategoriesComponent } from './components/pages/dashboard/products/product-categories/product-categories.component';
 import { ProductUnitsComponent } from './components/pages/dashboard/products/product-units/product-units.component';
 import { ProductBrandsComponent } from './components/pages/dashboard/products/product-brands/product-brands.component';
@@ -24,6 +24,8 @@ import { ExpenseCategoriesComponent } from './components/pages/expenses/expense-
 import { CreateExpensesComponent } from './components/pages/expenses/create-expenses/create-expenses.component';
 import { EditExpenseComponent } from './components/pages/expenses/edit-expense/edit-expense.component';
 import { CurrenciesComponent } from './components/pages/currencies/currencies.component';
+import { CounterslistComponent } from './components/pages/counterslist/counterslist.component';
+import { AssignEmployeeComponent } from './components/pages/counterslist/assign-employee/assign-employee.component';
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: "login", component: LoginComponent },
@@ -45,11 +47,13 @@ const routes: Routes = [
   { path: "createwarehouse", component: CreatewarehouseComponent },
   { path: "viewwarehouse", component: ViewwarehouseComponent },
   { path: "editwarehouse", component: EditwarehouseComponent },
-  {path:"expenses", component :ExpensesComponent},
-  {path:"expense-categories",component:ExpenseCategoriesComponent},
-  {path:"create-expenses",component:CreateExpensesComponent},
-  {path:"edit-expense",component:EditExpenseComponent},
-  {path:"currencies",component:CurrenciesComponent}
+  { path: "expenses", component: ExpensesComponent },
+  { path: "expense-categories", component: ExpenseCategoriesComponent },
+  { path: "create-expenses", component: CreateExpensesComponent },
+  { path: "edit-expense", component: EditExpenseComponent },
+  { path: "currencies", component: CurrenciesComponent },
+  { path: "counters", component: CounterslistComponent },
+  { path: "AssigningEmployee", component: AssignEmployeeComponent },
 
 ];
 
