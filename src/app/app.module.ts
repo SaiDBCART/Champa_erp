@@ -56,7 +56,7 @@ import { EditwarehouseComponent } from './components/pages/warehouse/editwarehou
     WarehouseComponent,
     CreatewarehouseComponent,
     ViewwarehouseComponent,
-    EditwarehouseComponent
+    EditwarehouseComponent,
   ],
   imports: [
 
