@@ -20,7 +20,7 @@ import { SalesComponent } from './components/pages/dashboard/sales/sales.compone
 import { PosComponent } from './components/pages/dashboard/pos/pos.component';
 import { DashboardcontentComponent } from './components/pages/dashboard/dashboardcontent/dashboardcontent.component';
 import { CreatesaleComponent } from './components/pages/dashboard/sales/createsale/createsale.component';
-import { Counter1Component } from './components/pages/counters/counter1/counter1.component';
+
 import { ViewsalesComponent } from './components/pages/dashboard/sales/viewsales/viewsales.component';
 import { EditsalesComponent } from './components/pages/dashboard/sales/editsales/editsales.component';
 import { ProductsComponent } from './components/pages/dashboard/products/products.component';
@@ -34,6 +34,7 @@ import { WarehouseComponent } from './components/pages/warehouse/warehouse.compo
 import { CreatewarehouseComponent } from './components/pages/warehouse/createwarehouse/createwarehouse.component';
 import { ViewwarehouseComponent } from './components/pages/warehouse/viewwarehouse/viewwarehouse.component';
 import { EditwarehouseComponent } from './components/pages/warehouse/editwarehouse/editwarehouse.component';
+
 @NgModule({
   declarations: [
     AppComponent,
