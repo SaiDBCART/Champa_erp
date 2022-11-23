@@ -86,4 +86,8 @@ export class SalesComponent implements OnInit {
   ShowModel() {
     this.ShowModal = true;
   }
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
 }
