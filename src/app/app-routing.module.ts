@@ -7,7 +7,6 @@ import { SalesComponent } from './components/pages/dashboard/sales/sales.compone
 import { CreatesaleComponent } from './components/pages/dashboard/sales/createsale/createsale.component';
 import { ViewsalesComponent } from './components/pages/dashboard/sales/viewsales/viewsales.component';
 import { EditsalesComponent } from './components/pages/dashboard/sales/editsales/editsales.component';
-import { Counter1Component } from './components/pages/counters/counter1/counter1.component';
 import { ProductsComponent } from './components/pages/dashboard/products/products.component';
 import { CreateproductComponent } from './components/pages/dashboard/products/createproduct/createproduct.component';
 import { EditproductComponent } from './components/pages/dashboard/products/editproduct/editproduct.component';
@@ -34,7 +33,6 @@ const routes: Routes = [
   { path: "createsale", component: CreatesaleComponent },
   { path: "viewsale", component: ViewsalesComponent },
   { path: "editsale", component: EditsalesComponent },
-  { path: "counter", component: Counter1Component },
   { path: "dashboard/product", component: ProductsComponent },
   { path: "createproduct", component: CreateproductComponent },
   { path: "editproduct", component: EditproductComponent },
