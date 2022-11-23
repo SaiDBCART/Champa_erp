@@ -7,10 +7,8 @@ import { HttpClientModule, HttpClient } from "@angular/common/http";
 import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
-import { MatTooltipModule } from '@angular/material/tooltip';
 import { NgxBarcodeModule } from 'ngx-barcode';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
-import { AutocompleteLibModule } from 'angular-ng-autocomplete';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -36,8 +34,6 @@ import { WarehouseComponent } from './components/pages/warehouse/warehouse.compo
 import { CreatewarehouseComponent } from './components/pages/warehouse/createwarehouse/createwarehouse.component';
 import { ViewwarehouseComponent } from './components/pages/warehouse/viewwarehouse/viewwarehouse.component';
 import { EditwarehouseComponent } from './components/pages/warehouse/editwarehouse/editwarehouse.component';
-import { CounterslistComponent } from './components/pages/counterslist/counterslist.component';
-import { AssignEmployeeComponent } from './components/pages/counterslist/assign-employee/assign-employee.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,7 +45,6 @@ import { AssignEmployeeComponent } from './components/pages/counterslist/assign-
     PosComponent,
     DashboardcontentComponent,
     CreatesaleComponent,
-    Counter1Component,
     ViewsalesComponent,
     EditsalesComponent,
     ProductsComponent,
@@ -63,14 +58,13 @@ import { AssignEmployeeComponent } from './components/pages/counterslist/assign-
     CreatewarehouseComponent,
     ViewwarehouseComponent,
     EditwarehouseComponent,
-    CounterslistComponent,
-    AssignEmployeeComponent
+
   ],
   imports: [
 
     BrowserModule, BrowserAnimationsModule, HttpClientModule, NgxBarcodeModule,
     AppRoutingModule, NgSelectModule, FormsModule, ReactiveFormsModule, MatPaginatorModule, MatSortModule, MatTableModule, Ng2SearchPipeModule,
-    AutocompleteLibModule, MatTooltipModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -7,7 +7,6 @@ import { SalesComponent } from './components/pages/dashboard/sales/sales.compone
 import { CreatesaleComponent } from './components/pages/dashboard/sales/createsale/createsale.component';
 import { ViewsalesComponent } from './components/pages/dashboard/sales/viewsales/viewsales.component';
 import { EditsalesComponent } from './components/pages/dashboard/sales/editsales/editsales.component';
-import { Counter1Component } from './components/pages/counters/counter1/counter1.component';
 import { ProductsComponent } from './components/pages/dashboard/products/products.component';
 import { CreateproductComponent } from './components/pages/dashboard/products/createproduct/createproduct.component';
 import { EditproductComponent } from './components/pages/dashboard/products/editproduct/editproduct.component';
@@ -20,8 +19,6 @@ import { WarehouseComponent } from './components/pages/warehouse/warehouse.compo
 import { CreatewarehouseComponent } from './components/pages/warehouse/createwarehouse/createwarehouse.component';
 import { ViewwarehouseComponent } from './components/pages/warehouse/viewwarehouse/viewwarehouse.component';
 import { EditwarehouseComponent } from './components/pages/warehouse/editwarehouse/editwarehouse.component';
-import { CounterslistComponent } from './components/pages/counterslist/counterslist.component';
-import { AssignEmployeeComponent } from './components/pages/counterslist/assign-employee/assign-employee.component';
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: "login", component: LoginComponent },
@@ -31,7 +28,6 @@ const routes: Routes = [
   { path: "createsale", component: CreatesaleComponent },
   { path: "viewsale", component: ViewsalesComponent },
   { path: "editsale", component: EditsalesComponent },
-  { path: "counter", component: Counter1Component },
   { path: "dashboard/product", component: ProductsComponent },
   { path: "createproduct", component: CreateproductComponent },
   { path: "editproduct", component: EditproductComponent },
@@ -43,9 +39,7 @@ const routes: Routes = [
   { path: "warehouse", component: WarehouseComponent },
   { path: "createwarehouse", component: CreatewarehouseComponent },
   { path: "viewwarehouse", component: ViewwarehouseComponent },
-  { path: "editwarehouse", component: EditwarehouseComponent },
-  { path: "counters", component: CounterslistComponent },
-  { path: "AssigningEmployee", component: AssignEmployeeComponent }
+  { path: "editwarehouse", component: EditwarehouseComponent }
 
 ];
 
